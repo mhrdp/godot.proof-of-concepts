@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://0ik6laanubo5"]
+
+[ext_resource type="FontFile" uid="uid://dwsh3bdqx3yje" path="res://assets/fonts/myriad-pro-cufonfonts/MYRIADPRO-BOLDCOND.OTF" id="1_cshku"]
+
+[node name="Frame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 2
+offset_right = 1080.0
+offset_bottom = 720.0
+color = Color(0.239216, 0.156863, 0.129412, 0.988235)
+
+[node name="HSplitContainer" type="HBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -917.0
+offset_bottom = -680.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DialogueModule" type="Button" parent="ColorRect/HSplitContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cshku")
+theme_override_font_sizes/font_size = 24
+text = "DIALOGUE"
+
+[node name="MapMovementModule" type="Button" parent="ColorRect/HSplitContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cshku")
+theme_override_font_sizes/font_size = 24
+text = "MAP MOVEMENT"
