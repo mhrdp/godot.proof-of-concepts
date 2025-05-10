@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctadbb5a8fvyn"]
+
+[ext_resource type="Script" uid="uid://bg1wg1qimkqx7" path="res://modules/notes_tech/scripts/NoteWritingFuncs.cs" id="1_4t8v0"]
+
+[node name="NoteFuncsContainer" type="VBoxContainer"]
+script = ExtResource("1_4t8v0")
+
+[node name="NoteMenuContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+alignment = 2
+
+[node name="CloseButton" type="Button" parent="NoteMenuContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Close"
+
+[node name="SaveButton" type="Button" parent="NoteMenuContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Save"
+
+[node name="NoteTitle" type="Label" parent="." groups=["Persist"]]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Placeholder Title"
+
+[node name="NoteUID" type="Label" parent="." groups=["Persist"]]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="NoteWriting" type="TextEdit" parent="." groups=["Persist"]]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(610, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 12
+placeholder_text = "Write notes here..."
+wrap_mode = 1

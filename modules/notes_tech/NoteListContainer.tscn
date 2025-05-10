@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtd6ixafl4hjx"]
+
+[ext_resource type="Texture2D" uid="uid://d3pkf0rinaba0" path="res://assets/imgs/notes_tech/note_box.png" id="1_80sth"]
+
+[node name="ListTexture" type="TextureRect"]
+size_flags_vertical = 3
+texture = ExtResource("1_80sth")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 157.0
+offset_bottom = 17.0
+theme_override_font_sizes/font_size = 10
+text = "HELLO WORLD"
+
+[node name="Desc" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 15.0
+offset_right = 157.0
+offset_bottom = 29.0
+theme_override_font_sizes/font_size = 8
+text = "Lorem ipsum sit dolor amet..."
