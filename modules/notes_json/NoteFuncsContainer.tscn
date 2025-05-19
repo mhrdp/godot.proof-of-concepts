@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ctadbb5a8fvyn"]
 
-[ext_resource type="Script" uid="uid://bg1wg1qimkqx7" path="res://modules/notes_tech/scripts/NoteWritingFuncs.cs" id="1_4t8v0"]
+[ext_resource type="Script" uid="uid://bg1wg1qimkqx7" path="res://modules/notes_json/scripts/NoteWritingJson.cs" id="1_4t8v0"]
 
 [node name="NoteFuncsContainer" type="VBoxContainer"]
 script = ExtResource("1_4t8v0")
@@ -38,3 +38,5 @@ size_flags_vertical = 3
 theme_override_font_sizes/font_size = 12
 placeholder_text = "Write notes here..."
 wrap_mode = 1
+
+[connection signal="pressed" from="NoteMenuContainer/SaveButton" to="." method="_OnSaveButtonPressed"]
