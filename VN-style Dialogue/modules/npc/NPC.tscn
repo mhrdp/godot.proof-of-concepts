@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bsl21caelt6kd"]
 
-[ext_resource type="Script" path="res://modules/npc/NPC.cs" id="1_170p3"]
+[ext_resource type="Script" uid="uid://bwl2wfnlnd5r1" path="res://modules/npc/NPC.cs" id="1_170p3"]
 [ext_resource type="Texture2D" uid="uid://2c8h5qvxr3ph" path="res://icon.svg" id="2_y420k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_detdt"]
