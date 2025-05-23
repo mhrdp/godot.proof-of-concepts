@@ -33,6 +33,14 @@ Godot will create a new instance of Neovim as explained above.
 	* `nvim +{line} {file}` for Windows Terminal
 	* `-NoExit -Command "nvim +{line} '{file}'"` for Windows PowerShell
 
+### Linux
+#### By making `.sh` script and set it as editor path
+1. Create a Bash (`.sh`) script to tell Godot to run the terminal
+2. Set `Exec Flags` accordingly
+
+#### The same way as Windows
+TBA...
+
 ### Other Examples
 #### Alacritty
 `Exec Path` to `alacritty`; `Exec Flags` to `-e nvim +{line} {file}`.
