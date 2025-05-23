@@ -28,7 +28,7 @@ public partial class NoteWritingJson : VBoxContainer
         string jsonPath = "res://modules/notes_json/data/notes_data.json";
 
 
-        Godot.Collections.Array<Godot.Collections.Dictionary<string, string>> noteData = 
+        Godot.Collections.Array<Godot.Collections.Dictionary<string, string>> noteData =
             new Godot.Collections.Array<Godot.Collections.Dictionary<string, string>>();
 
         noteData.Add(new Godot.Collections.Dictionary<string, string>());
@@ -40,7 +40,7 @@ public partial class NoteWritingJson : VBoxContainer
         string noteDataToString = JsonSerializer.Serialize(noteData);
         GD.Print(noteDataToString.GetType());
 
-        if(!FileAccess.FileExists(jsonPath))
+        if (!FileAccess.FileExists(jsonPath))
         {
             FileAccess fileObj = FileAccess.Open(jsonPath, FileAccess.ModeFlags.Write);
             fileObj.StoreLine(noteDataToString);
@@ -53,7 +53,7 @@ public partial class NoteWritingJson : VBoxContainer
             string fileObjStringify = fileObj.GetLine();
             Variant parsedFileObjStringify = Json.ParseString(fileObjStringify);
 
-            Godot.Collections.Array<Godot.Collections.Dictionary<string, string>> parsedFileObjStringifyToArray = 
+            Godot.Collections.Array<Godot.Collections.Dictionary<string, string>> parsedFileObjStringifyToArray =
                 parsedFileObjStringify.AsGodotArray<Godot.Collections.Dictionary<string, string>>();
 
             GD.Print("File exist...");
@@ -70,7 +70,7 @@ public partial class NoteWritingJson : VBoxContainer
         string jsonPath = "res://modules/notes_json/data/notes_data.json";
         string noteUID = "note";
 
-        if(!FileAccess.FileExists(jsonPath))
+        if (!FileAccess.FileExists(jsonPath))
         {
             noteUID = noteUID + 1;
         }
@@ -79,20 +79,20 @@ public partial class NoteWritingJson : VBoxContainer
             FileAccess fileObj = FileAccess.Open(jsonPath, FileAccess.ModeFlags.Read);
             string fileObjStringify = fileObj.GetLine();
             Variant parsedFileObjStringify = Json.ParseString(fileObjStringify);
-            
+
             Godot.Collections.Array<Godot.Collections.Dictionary<string, string>> parsedFileObjToArray =
                 parsedFileObjStringify.AsGodotArray<Godot.Collections.Dictionary<string, string>>();
 
             int numOfArray = parsedFileObjToArray.Count;
-            noteUID = noteUID + (numOfArray + 1);
+            noteUID = numOfArray + 1;
         }
         return noteUID;
-    } 
+    }
 
 
     // SIGNAL AREA
-    public void _OnSaveButtonPressed() 
-    { 
-        SaveToJson(); 
-    } 
+    public void _OnSaveButtonPressed()
+    {
+        SaveToJson();
+    }
 }
