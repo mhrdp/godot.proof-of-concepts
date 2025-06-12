@@ -1,59 +1,82 @@
-using Godot;
-using Godot.Collections;
-using System;
+using GDGeneric = Godot;
+using GDCollections = Godot.Collections;
+using CSSys = System;
+using CSSysIO = System.IO;
+using CSJson = System.Text.Json;
+using CSCollections = System.Collections.Generic;
 
-public partial class NoteWritingJson : VBoxContainer
+public partial class NoteWritingJson : GDGeneric.VBoxContainer
 {
-    private Button saveButton;
-    private Button closeButton;
-    private TextEdit noteArea;
-    private Label noteTitle;
-    private Label noteUID;
+    private GDGeneric.Button saveButton;
+    private GDGeneric.Button closeButton;
+    private GDGeneric.TextEdit noteArea;
+    private GDGeneric.Label noteTitle;
+    private GDGeneric.Label noteUID;
+
+    private bool edit;
 
     public override void _Ready()
     {
-        saveButton = GetNode<Button>("%SaveButton");
-        closeButton = GetNode<Button>("%CloseButton");
-        noteArea = GetNode<TextEdit>("%NoteWriting");
-        noteTitle = GetNode<Label>("%NoteTitle");
+        saveButton = GetNode<GDGeneric.Button>("%SaveButton");
+        closeButton = GetNode<GDGeneric.Button>("%CloseButton");
+        noteArea = GetNode<GDGeneric.TextEdit>("%NoteWriting");
+        noteTitle = GetNode<GDGeneric.Label>("%NoteTitle");
+
+        edit = false;
 
         SaveToJson();
     }
 
 
     // CUSTOM FUNCTIONS
+    public class Note
+    {
+        public string noteId { get; set; }
+        public GDCollections.Dictionary<string, string> noteContent { get; set; }
+
+        public GDCollections.Dictionary<string, GDGeneric.Variant> ToVariantDictionary()
+        {
+            var dict = new GDCollections.Dictionary<string, GDGeneric.Variant>
+            {
+                {"note_id", noteId},
+                {"note_content", noteContent},
+            };
+            return dict;
+        }
+    }
+
     public void SaveToJson()
     {
-        string jsonPath = "res://modules/notes_json/data/notes_data.json";
+        string jsonPath = "modules/notes_json/data/notes_data.json";
 
-        // Godot Dictionary, do not confuse with C# Dictionary
-        Dictionary<string, Dictionary<string, string>> note =
-            new Dictionary<string, Dictionary<string, string>>();
-        Dictionary<string, string> data = new Dictionary<string, string>();
+        Note notes = new Note();
+        GDCollections.Array<GDCollections.Dictionary<string, GDGeneric.Variant>> noteData =
+            new GDCollections.Array<GDCollections.Dictionary<string, GDGeneric.Variant>>();
+        GDCollections.Dictionary<string, string> data = new GDCollections.Dictionary<string, string>();
 
         data.Add("note_title", "How to strike it rich");
         data.Add("note_desc", "Legit 100%!!");
         data.Add("note_content", "Who knows?");
 
-        note.Add("0002", data);
+        notes.noteId = "0002";
+        notes.noteContent = data;
 
-        if (!FileAccess.FileExists(jsonPath))
+        noteData.Add(notes.ToVariantDictionary());
+
+        string jsonString2 = GDGeneric.Json.Stringify(noteData);
+
+        if (!GDGeneric.FileAccess.FileExists(jsonPath))
         {
-            FileAccess createNoteFile = FileAccess.Open(jsonPath, FileAccess.ModeFlags.Write);
-            createNoteFile.StoreLine(Json.Stringify(note));
+            edit = false;
+            GDGeneric.FileAccess createNoteFile = GDGeneric.FileAccess.Open(jsonPath, GDGeneric.FileAccess.ModeFlags.Write);
+            createNoteFile.StoreLine(jsonString2);
         }
         else
         {
-            Json noteFile = new Json();
-            FileAccess readNoteFile = FileAccess.Open(jsonPath, FileAccess.ModeFlags.Read);
-            Error parsedNoteFile = noteFile.Parse(readNoteFile.GetAsText());
+            GDGeneric.Json noteFile = new GDGeneric.Json();
+            GDGeneric.FileAccess readNoteFile = GDGeneric.FileAccess.Open(jsonPath, GDGeneric.FileAccess.ModeFlags.Read);
+            GDGeneric.Error parsedNoteFile = noteFile.Parse(readNoteFile.GetAsText());
 
-            if (parsedNoteFile == Error.Ok)
-            {
-                Dictionary<string, Dictionary<string, string>> noteFileDict =
-                    noteFile.Data.AsGodotDictionary<string, Dictionary<string, string>>();
-
-            }
             readNoteFile.Close();
 
         }
