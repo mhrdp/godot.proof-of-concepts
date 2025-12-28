@@ -1,0 +1,429 @@
+[gd_scene format=3 uid="uid://bi5nhxi71fgqe"]
+
+[node name="MainContainer" type="Control"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+custom_minimum_size = Vector2(1080, 720)
+layout_mode = 0
+offset_right = 1080.0
+offset_bottom = 720.0
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="SidebarContainer" type="ScrollContainer" parent="HSplitContainer"]
+custom_minimum_size = Vector2(255, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="SidebarBG" type="ColorRect" parent="HSplitContainer/SidebarContainer"]
+custom_minimum_size = Vector2(255, 720)
+layout_mode = 2
+size_flags_horizontal = 0
+color = Color(0.13682577, 0.13682574, 0.13682571, 1)
+
+[node name="SidebarWrapper" type="VBoxContainer" parent="HSplitContainer/SidebarContainer/SidebarBG"]
+custom_minimum_size = Vector2(250, 720)
+layout_mode = 0
+offset_right = 250.0
+offset_bottom = 720.0
+size_flags_horizontal = 0
+
+[node name="SidebarContentWrapper" type="MarginContainer" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 0
+
+[node name="TextureRect" type="ColorRect" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper"]
+layout_mode = 2
+color = Color(0.23392546, 0.23392546, 0.23392543, 1)
+
+[node name="Label" type="Label" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper/TextureRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 76.0
+offset_bottom = 23.0
+text = "Test Title"
+
+[node name="Label2" type="Label" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper/TextureRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 23.0
+offset_right = 225.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(0.737193, 0.7371929, 0.7371929, 1)
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 14
+text = "Test description for testing purpose only"
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="SidebarContentWrapper2" type="MarginContainer" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 0
+
+[node name="TextureRect" type="ColorRect" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper2"]
+layout_mode = 2
+color = Color(0.23392546, 0.23392546, 0.23392543, 1)
+
+[node name="Label" type="Label" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper2/TextureRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 76.0
+offset_bottom = 23.0
+text = "Test Title"
+
+[node name="Label2" type="Label" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper2/TextureRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 23.0
+offset_right = 225.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(0.737193, 0.7371929, 0.7371929, 1)
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 14
+text = "Test description for testing purpose only"
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="SidebarContentWrapper3" type="MarginContainer" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 0
+
+[node name="TextureRect" type="ColorRect" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper3"]
+layout_mode = 2
+color = Color(0.23392546, 0.23392546, 0.23392543, 1)
+
+[node name="Label" type="Label" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper3/TextureRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 76.0
+offset_bottom = 23.0
+text = "Test Title"
+
+[node name="Label2" type="Label" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper3/TextureRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 23.0
+offset_right = 225.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(0.737193, 0.7371929, 0.7371929, 1)
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 14
+text = "Test description for testing purpose only"
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="SidebarContentWrapper4" type="MarginContainer" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 0
+
+[node name="TextureRect" type="ColorRect" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper4"]
+layout_mode = 2
+color = Color(0.23392546, 0.23392546, 0.23392543, 1)
+
+[node name="Label" type="Label" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper4/TextureRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 76.0
+offset_bottom = 23.0
+text = "Test Title"
+
+[node name="Label2" type="Label" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper4/TextureRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 23.0
+offset_right = 225.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(0.737193, 0.7371929, 0.7371929, 1)
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 14
+text = "Test description for testing purpose only"
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="SidebarContentWrapper5" type="MarginContainer" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 0
+
+[node name="TextureRect" type="ColorRect" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper5"]
+layout_mode = 2
+color = Color(0.23392546, 0.23392546, 0.23392543, 1)
+
+[node name="Label" type="Label" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper5/TextureRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 76.0
+offset_bottom = 23.0
+text = "Test Title"
+
+[node name="Label2" type="Label" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper5/TextureRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 23.0
+offset_right = 225.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(0.737193, 0.7371929, 0.7371929, 1)
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 14
+text = "Test description for testing purpose only"
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="SidebarContentWrapper6" type="MarginContainer" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 0
+
+[node name="TextureRect" type="ColorRect" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper6"]
+layout_mode = 2
+color = Color(0.23392546, 0.23392546, 0.23392543, 1)
+
+[node name="Label" type="Label" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper6/TextureRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 76.0
+offset_bottom = 23.0
+text = "Test Title"
+
+[node name="Label2" type="Label" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper6/TextureRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 23.0
+offset_right = 225.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(0.737193, 0.7371929, 0.7371929, 1)
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 14
+text = "Test description for testing purpose only"
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="SidebarContentWrapper7" type="MarginContainer" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 0
+
+[node name="TextureRect" type="ColorRect" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper7"]
+layout_mode = 2
+color = Color(0.23392546, 0.23392546, 0.23392543, 1)
+
+[node name="Label" type="Label" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper7/TextureRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 76.0
+offset_bottom = 23.0
+text = "Test Title"
+
+[node name="Label2" type="Label" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper7/TextureRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 23.0
+offset_right = 225.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(0.737193, 0.7371929, 0.7371929, 1)
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 14
+text = "Test description for testing purpose only"
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="SidebarContentWrapper8" type="MarginContainer" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 0
+
+[node name="TextureRect" type="ColorRect" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper8"]
+layout_mode = 2
+color = Color(0.23392546, 0.23392546, 0.23392543, 1)
+
+[node name="Label" type="Label" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper8/TextureRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 76.0
+offset_bottom = 23.0
+text = "Test Title"
+
+[node name="Label2" type="Label" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper8/TextureRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 23.0
+offset_right = 225.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(0.737193, 0.7371929, 0.7371929, 1)
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 14
+text = "Test description for testing purpose only"
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="SidebarContentWrapper9" type="MarginContainer" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 0
+
+[node name="TextureRect" type="ColorRect" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper9"]
+layout_mode = 2
+color = Color(0.23392546, 0.23392546, 0.23392543, 1)
+
+[node name="Label" type="Label" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper9/TextureRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 76.0
+offset_bottom = 23.0
+text = "Test Title"
+
+[node name="Label2" type="Label" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper9/TextureRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 23.0
+offset_right = 225.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(0.737193, 0.7371929, 0.7371929, 1)
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 14
+text = "Test description for testing purpose only"
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="SidebarContentWrapper10" type="MarginContainer" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 0
+
+[node name="TextureRect" type="ColorRect" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper10"]
+layout_mode = 2
+color = Color(0.23392546, 0.23392546, 0.23392543, 1)
+
+[node name="Label" type="Label" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper10/TextureRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 76.0
+offset_bottom = 23.0
+text = "Test Title"
+
+[node name="Label2" type="Label" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper10/TextureRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 23.0
+offset_right = 225.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(0.737193, 0.7371929, 0.7371929, 1)
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 14
+text = "Test description for testing purpose only"
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="SidebarContentWrapper11" type="MarginContainer" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 0
+
+[node name="TextureRect" type="ColorRect" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper11"]
+layout_mode = 2
+color = Color(0.23392546, 0.23392546, 0.23392543, 1)
+
+[node name="Label" type="Label" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper11/TextureRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 76.0
+offset_bottom = 23.0
+text = "Test Title"
+
+[node name="Label2" type="Label" parent="HSplitContainer/SidebarContainer/SidebarBG/SidebarWrapper/SidebarContentWrapper11/TextureRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 23.0
+offset_right = 225.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(0.737193, 0.7371929, 0.7371929, 1)
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 14
+text = "Test description for testing purpose only"
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 720)
+layout_mode = 2
+
+[node name="MenuBarBG" type="ColorRect" parent="HSplitContainer/VBoxContainer"]
+custom_minimum_size = Vector2(255, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.20871013, 0.20871016, 0.20871013, 1)
+
+[node name="NotepadBG" type="ColorRect" parent="HSplitContainer/VBoxContainer"]
+custom_minimum_size = Vector2(255, 680)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.13682577, 0.13682574, 0.13682571, 1)
