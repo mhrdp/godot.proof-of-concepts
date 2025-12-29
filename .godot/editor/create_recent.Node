@@ -1,3 +1,8 @@
+TextEdit
+Button
+Control
+HBoxContainer
+RichTextLabel
 PanelContainer
 Container
 VBoxContainer
@@ -8,4 +13,3 @@ HScrollBar
 Label
 MarginContainer
 TextureRect
-HSplitContainer
