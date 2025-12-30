@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bi5nhxi71fgqe"]
+[gd_scene load_steps=3 format=3 uid="uid://bi5nhxi71fgqe"]
 
 [ext_resource type="Theme" uid="uid://b3hxokiqwbuo3" path="res://examples/icon_texture/theme.tres" id="1_4nbmk"]
+[ext_resource type="Script" uid="uid://frk3lwc6jtng" path="res://modules/notepad/Notepad.cs" id="1_ykug4"]
 
 [node name="MainContainer" type="Control"]
 clip_contents = true
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ykug4")
 
 [node name="HSplitContainer" type="HSplitContainer" parent="."]
 custom_minimum_size = Vector2(1080, 720)

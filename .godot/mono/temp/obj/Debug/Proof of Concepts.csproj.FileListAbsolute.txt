@@ -1,0 +1,18 @@
+/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/.godot/mono/temp/bin/Debug/Proof of Concepts.deps.json
+/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/.godot/mono/temp/bin/Debug/Proof of Concepts.runtimeconfig.json
+/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/.godot/mono/temp/bin/Debug/Proof of Concepts.dll
+/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/.godot/mono/temp/bin/Debug/Proof of Concepts.pdb
+/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/.godot/mono/temp/bin/Debug/GodotSharp.dll
+/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/.godot/mono/temp/bin/Debug/GodotSharpEditor.dll
+/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.csproj.AssemblyReference.cache
+/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.GeneratedMSBuildEditorConfig.editorconfig
+/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.AssemblyInfoInputs.cache
+/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.AssemblyInfo.cs
+/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.csproj.CoreCompileInputs.cache
+/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.sourcelink.json
+/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.csproj.CopyComplete
+/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.dll
+/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/refint/Proof of Concepts.dll
+/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.pdb
+/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.genruntimeconfig.cache
+/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/ref/Proof of Concepts.dll
