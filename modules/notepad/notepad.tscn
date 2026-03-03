@@ -1,0 +1,125 @@
+[gd_scene load_steps=3 format=3 uid="uid://bi5nhxi71fgqe"]
+
+[ext_resource type="Theme" uid="uid://b3hxokiqwbuo3" path="res://examples/icon_texture/theme.tres" id="1_4nbmk"]
+[ext_resource type="Script" uid="uid://frk3lwc6jtng" path="res://modules/notepad/Notepad.cs" id="1_ykug4"]
+
+[node name="MainContainer" type="Control"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ykug4")
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+custom_minimum_size = Vector2(1080, 720)
+layout_mode = 0
+offset_right = 1080.0
+offset_bottom = 720.0
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="SidebarBG" type="ColorRect" parent="HSplitContainer"]
+custom_minimum_size = Vector2(250, 720)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+color = Color(0.13682577, 0.13682574, 0.13682571, 1)
+
+[node name="SidebarContainer" type="ScrollContainer" parent="HSplitContainer/SidebarBG"]
+custom_minimum_size = Vector2(255, 0)
+layout_mode = 0
+offset_right = 258.0
+offset_bottom = 720.0
+size_flags_horizontal = 0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="SidebarWrapper" type="VBoxContainer" parent="HSplitContainer/SidebarBG/SidebarContainer"]
+custom_minimum_size = Vector2(250, 720)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="SidebarContentWrapper" type="MarginContainer" parent="HSplitContainer/SidebarBG/SidebarContainer/SidebarWrapper"]
+visible = false
+clip_contents = true
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 0
+
+[node name="TextureRect" type="ColorRect" parent="HSplitContainer/SidebarBG/SidebarContainer/SidebarWrapper/SidebarContentWrapper"]
+layout_mode = 2
+color = Color(0.23392546, 0.23392546, 0.23392543, 1)
+
+[node name="Label" type="Label" parent="HSplitContainer/SidebarBG/SidebarContainer/SidebarWrapper/SidebarContentWrapper/TextureRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 76.0
+offset_bottom = 23.0
+text = "Test Title"
+
+[node name="Label2" type="Label" parent="HSplitContainer/SidebarBG/SidebarContainer/SidebarWrapper/SidebarContentWrapper/TextureRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 23.0
+offset_right = 225.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(0.737193, 0.7371929, 0.7371929, 1)
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 12
+text = "Test description for testing purpose only"
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer"]
+custom_minimum_size = Vector2(0, 720)
+layout_mode = 2
+
+[node name="MenuBarBG" type="ColorRect" parent="HSplitContainer/VBoxContainer"]
+custom_minimum_size = Vector2(255, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.20871013, 0.20871016, 0.20871013, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HSplitContainer/VBoxContainer/MenuBarBG"]
+custom_minimum_size = Vector2(830, 30)
+layout_mode = 0
+offset_right = 830.0
+offset_bottom = 30.0
+
+[node name="Control" type="Control" parent="HSplitContainer/VBoxContainer/MenuBarBG/HBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="AddButton" type="Button" parent="HSplitContainer/VBoxContainer/MenuBarBG/HBoxContainer/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+offset_right = 30.0
+offset_bottom = 30.0
+theme = ExtResource("1_4nbmk")
+
+[node name="NotepadBG" type="ColorRect" parent="HSplitContainer/VBoxContainer"]
+custom_minimum_size = Vector2(830, 680)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.13682577, 0.13682574, 0.13682571, 1)
+
+[node name="Notepad" type="TextEdit" parent="HSplitContainer/VBoxContainer/NotepadBG"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(830, 680)
+layout_mode = 0
+offset_right = 830.0
+offset_bottom = 680.0
+placeholder_text = "Input your note here"
+wrap_mode = 1
