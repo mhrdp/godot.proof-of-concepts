@@ -1,0 +1,211 @@
+[gd_scene format=3 uid="uid://hqd53lm6lmir"]
+
+[ext_resource type="Script" uid="uid://dala5tkj7y06s" path="res://modules/notes_json/components/scr/NotesHomepage.cs" id="1_kyeks"]
+[ext_resource type="Texture2D" uid="uid://bs64fuoehlpna" path="res://assets/imgs/icons/save.png" id="1_vamrd"]
+[ext_resource type="Texture2D" uid="uid://bebv1138p1m58" path="res://modules/notes_json/assets/add_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" id="1_vrvfc"]
+[ext_resource type="Texture2D" uid="uid://c6fa8o0lq4rl0" path="res://assets/imgs/icons/undo.png" id="2_kyeks"]
+[ext_resource type="Texture2D" uid="uid://chqst7n57r6dm" path="res://assets/imgs/icons/redo.png" id="3_eukc0"]
+[ext_resource type="PackedScene" uid="uid://dwqgtqwmggptc" path="res://modules/notes_json/components/NewNotePopup.tscn" id="6_eukc0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vrvfc"]
+font_size = 14
+
+[sub_resource type="SystemFont" id="SystemFont_4uqp8"]
+font_names = PackedStringArray("Myriad Pro")
+font_weight = 325
+
+[sub_resource type="LabelSettings" id="LabelSettings_2jn77"]
+font = SubResource("SystemFont_4uqp8")
+font_size = 14
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dvasw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vrvfc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4uqp8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2jn77"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vamrd"]
+
+[sub_resource type="Theme" id="Theme_kyeks"]
+VScrollBar/styles/grabber = SubResource("StyleBoxEmpty_dvasw")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_vrvfc")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_4uqp8")
+VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_2jn77")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_vamrd")
+
+[node name="NotesHomepage" type="Control" unique_id=1145404949]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kyeks")
+
+[node name="NotesMainContainer" type="HSplitContainer" parent="." unique_id=644200548]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.0298611
+anchor_right = 1.0
+anchor_bottom = 1.02986
+offset_top = 21.5
+offset_bottom = -21.5
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="NotesSidebarContainer" type="Control" parent="NotesMainContainer" unique_id=320891668]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="NotesSidebarColor" type="ColorRect" parent="NotesMainContainer/NotesSidebarContainer" unique_id=293411248]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.262932, 0.262932, 0.262932, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="NotesMainContainer/NotesSidebarContainer/NotesSidebarColor" unique_id=306516293]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NotesSidebar" type="VBoxContainer" parent="NotesMainContainer/NotesSidebarContainer/NotesSidebarColor/ScrollContainer" unique_id=1590060473]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LabelContainer" type="MarginContainer" parent="NotesMainContainer/NotesSidebarContainer/NotesSidebarColor/ScrollContainer/NotesSidebar" unique_id=838835823]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+
+[node name="ListOfNotesLabel" type="Label" parent="NotesMainContainer/NotesSidebarContainer/NotesSidebarColor/ScrollContainer/NotesSidebar/LabelContainer" unique_id=1810802123]
+layout_mode = 2
+text = "Saved Notes"
+clip_text = true
+
+[node name="ListOfNotesContainer" type="MarginContainer" parent="NotesMainContainer/NotesSidebarContainer/NotesSidebarColor/ScrollContainer/NotesSidebar" unique_id=1362433459]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="ListOfNotesBG" type="ColorRect" parent="NotesMainContainer/NotesSidebarContainer/NotesSidebarColor/ScrollContainer/NotesSidebar/ListOfNotesContainer" unique_id=2005559651]
+layout_mode = 2
+color = Color(0.2, 0.2, 0.2, 1)
+
+[node name="NotesTitle" type="Label" parent="NotesMainContainer/NotesSidebarContainer/NotesSidebarColor/ScrollContainer/NotesSidebar/ListOfNotesContainer/ListOfNotesBG" unique_id=1713238151]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 9.0
+offset_top = 2.0
+offset_right = -11.0
+offset_bottom = 25.0
+grow_horizontal = 2
+text = "Title For the notes here okay"
+label_settings = SubResource("LabelSettings_vrvfc")
+clip_text = true
+text_overrun_behavior = 4
+
+[node name="NotesTitle2" type="Label" parent="NotesMainContainer/NotesSidebarContainer/NotesSidebarColor/ScrollContainer/NotesSidebar/ListOfNotesContainer/ListOfNotesBG" unique_id=578733755]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 9.0
+offset_top = 26.0
+offset_right = -11.0
+offset_bottom = 61.0
+grow_horizontal = 2
+text = "Title For the notes here okay, now just write anything here"
+label_settings = SubResource("LabelSettings_2jn77")
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 4
+
+[node name="NotesContentContainer" type="VBoxContainer" parent="NotesMainContainer" unique_id=1236054753]
+custom_minimum_size = Vector2(720, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="NotesMenuContainer" type="HBoxContainer" parent="NotesMainContainer/NotesContentContainer" unique_id=2060887997]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+alignment = 2
+
+[node name="NotesUndoButton" type="Button" parent="NotesMainContainer/NotesContentContainer/NotesMenuContainer" unique_id=915964526]
+layout_mode = 2
+disabled = true
+icon = ExtResource("2_kyeks")
+icon_alignment = 1
+
+[node name="NotesRedoButton" type="Button" parent="NotesMainContainer/NotesContentContainer/NotesMenuContainer" unique_id=1291227415]
+layout_mode = 2
+disabled = true
+icon = ExtResource("3_eukc0")
+icon_alignment = 1
+
+[node name="NotesSaveButton" type="Button" parent="NotesMainContainer/NotesContentContainer/NotesMenuContainer" unique_id=1373389678]
+layout_mode = 2
+disabled = true
+icon = ExtResource("1_vamrd")
+icon_alignment = 1
+
+[node name="NotesAddButton" type="Button" parent="NotesMainContainer/NotesContentContainer/NotesMenuContainer" unique_id=1505935013]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+icon = ExtResource("1_vrvfc")
+icon_alignment = 1
+
+[node name="NotesContentContainer" type="ScrollContainer" parent="NotesMainContainer/NotesContentContainer" unique_id=308687042]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_kyeks")
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="NotesContentBG" type="ColorRect" parent="NotesMainContainer/NotesContentContainer/NotesContentContainer" unique_id=585355855]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.201527, 0.201527, 0.201527, 1)
+
+[node name="NotesContentMargin" type="MarginContainer" parent="NotesMainContainer/NotesContentContainer/NotesContentContainer/NotesContentBG" unique_id=1574063332]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="NotesContent" type="TextEdit" parent="NotesMainContainer/NotesContentContainer/NotesContentContainer/NotesContentBG/NotesContentMargin" unique_id=1277290222]
+layout_mode = 2
+theme_override_colors/background_color = Color(0.2, 0.2, 0.2, 1)
+placeholder_text = "Write your note here..."
+virtual_keyboard_enabled = false
+
+[node name="NewNotePopup" parent="NotesMainContainer" unique_id=173568023 instance=ExtResource("6_eukc0")]
+unique_name_in_owner = true
+
+[connection signal="pressed" from="NotesMainContainer/NotesContentContainer/NotesMenuContainer/NotesAddButton" to="." method="_OnNotesAddButtonPressed"]

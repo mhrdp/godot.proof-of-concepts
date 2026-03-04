@@ -5,7 +5,6 @@ public partial class NotesHomepage : Control
 {
     // INIT POPUP NODE
     public Popup newNotePopup;
-    private Button newNotePopupCancelBtn;
 
     // INIT NOTE CONTAINER NODE
     public Button newNoteButton;
@@ -15,29 +14,21 @@ public partial class NotesHomepage : Control
     {
         newNotePopup = GetNode<Popup>("%NewNotePopup");
         newNoteButton = GetNode<Button>("%NotesAddButton");
-        newNotePopupCancelBtn = GetNode<Button>("%CancelButton");
     }
 
     public override void _Process(double delta)
     {
+        if (newNotePopup.Visible = false)
+        {
+            newNoteButton.Disabled = false;
+        }
     }
 
 
     // *** SIGNAL *** //
-    private void _OnNotesAddButtonToggled(bool toggled_on)
+    private void _OnNotesAddButtonPressed()
     {
-        switch (toggled_on)
-        {
-            case true:
-                newNotePopup.Visible = true;
-                newNoteButton.Disabled = true;
-                break;
-            case false:
-                newNoteButton.Disabled = false;
-                break;
-            default:
-                newNoteButton.Disabled = false;
-                break;
-        }
+        newNotePopup.Visible = true;
+        newNoteButton.Disabled = true;
     }
 }

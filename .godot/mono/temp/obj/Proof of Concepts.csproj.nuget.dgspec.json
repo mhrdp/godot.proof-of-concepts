@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/Proof of Concepts.csproj": {}
+    "E:\\Program\\GitHub\\godot.proof-of-concepts\\Proof of Concepts.csproj": {}
   },
   "projects": {
-    "/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/Proof of Concepts.csproj": {
+    "E:\\Program\\GitHub\\godot.proof-of-concepts\\Proof of Concepts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/Proof of Concepts.csproj",
+        "projectUniqueName": "E:\\Program\\GitHub\\godot.proof-of-concepts\\Proof of Concepts.csproj",
         "projectName": "Proof of Concepts",
-        "projectPath": "/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/Proof of Concepts.csproj",
-        "packagesPath": "/home/mahardhika/.nuget/packages/",
-        "outputPath": "/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/",
+        "projectPath": "E:\\Program\\GitHub\\godot.proof-of-concepts\\Proof of Concepts.csproj",
+        "packagesPath": "C:\\Users\\Mahardhika\\.nuget\\packages\\",
+        "outputPath": "E:\\Program\\GitHub\\godot.proof-of-concepts\\.godot\\mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/mahardhika/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Mahardhika\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -40,17 +45,17 @@
           "dependencies": {
             "Godot.SourceGenerators": {
               "target": "Package",
-              "version": "[4.5.1, )",
+              "version": "[4.6.1, )",
               "autoReferenced": true
             },
             "GodotSharp": {
               "target": "Package",
-              "version": "[4.5.1, )",
+              "version": "[4.6.1, )",
               "autoReferenced": true
             },
             "GodotSharpEditor": {
               "target": "Package",
-              "version": "[4.5.1, )",
+              "version": "[4.6.1, )",
               "autoReferenced": true
             }
           },
@@ -65,18 +70,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.122/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
