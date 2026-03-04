@@ -4,24 +4,26 @@ using System;
 public partial class NotesHomepage : Control
 {
     // INIT POPUP NODE
-    public Popup newNotePopup;
+    private Popup newNotePopup;
+    private Button popupCancelButton;
+    private Button popupConfirmButton;
+    private LineEdit popupNewNoteTitle;
 
     // INIT NOTE CONTAINER NODE
-    public Button newNoteButton;
+    private Button newNoteButton;
 
 
     public override void _Ready()
     {
         newNotePopup = GetNode<Popup>("%NewNotePopup");
         newNoteButton = GetNode<Button>("%NotesAddButton");
+        popupConfirmButton = GetNode<Button>("%ConfirmButton");
+        popupCancelButton = GetNode<Button>("%CancelButton");
+        popupNewNoteTitle = GetNode<LineEdit>("%PopupNewNoteTitle");
     }
 
     public override void _Process(double delta)
     {
-        if (newNotePopup.Visible = false)
-        {
-            newNoteButton.Disabled = false;
-        }
     }
 
 
@@ -30,5 +32,17 @@ public partial class NotesHomepage : Control
     {
         newNotePopup.Visible = true;
         newNoteButton.Disabled = true;
+    }
+
+    private void _OnCancelButtonPressed()
+    {
+        newNoteButton.Disabled = false;
+        newNotePopup.Visible = false;
+    }
+
+    private void _OnConfirmButtonPressed()
+    {
+        newNoteButton.Disabled = false;
+        newNotePopup.Visible = false;
     }
 }

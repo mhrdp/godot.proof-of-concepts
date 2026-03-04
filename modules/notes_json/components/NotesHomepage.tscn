@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://bebv1138p1m58" path="res://modules/notes_json/assets/add_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" id="1_vrvfc"]
 [ext_resource type="Texture2D" uid="uid://c6fa8o0lq4rl0" path="res://assets/imgs/icons/undo.png" id="2_kyeks"]
 [ext_resource type="Texture2D" uid="uid://chqst7n57r6dm" path="res://assets/imgs/icons/redo.png" id="3_eukc0"]
-[ext_resource type="PackedScene" uid="uid://dwqgtqwmggptc" path="res://modules/notes_json/components/NewNotePopup.tscn" id="6_eukc0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vrvfc"]
 font_size = 14
@@ -34,6 +33,13 @@ VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_vrvfc")
 VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_4uqp8")
 VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_2jn77")
 VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_vamrd")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vamrd"]
+bg_color = Color(0.1764706, 0.1764706, 0.1764706, 1)
+
+[sub_resource type="Theme" id="Theme_eukc0"]
+Label/font_sizes/font_size = 14
+Label/styles/normal = SubResource("StyleBoxFlat_vamrd")
 
 [node name="NotesHomepage" type="Control" unique_id=1145404949]
 layout_mode = 3
@@ -205,7 +211,66 @@ theme_override_colors/background_color = Color(0.2, 0.2, 0.2, 1)
 placeholder_text = "Write your note here..."
 virtual_keyboard_enabled = false
 
-[node name="NewNotePopup" parent="NotesMainContainer" unique_id=173568023 instance=ExtResource("6_eukc0")]
+[node name="NewNotePopup" type="Popup" parent="NotesMainContainer" unique_id=173568023]
 unique_name_in_owner = true
+oversampling_override = 1.0
+initial_position = 1
+size = Vector2i(250, 95)
+visible = true
+
+[node name="PopupVContainer" type="VBoxContainer" parent="NotesMainContainer/NewNotePopup" unique_id=913821647]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PopupMarginContainer" type="MarginContainer" parent="NotesMainContainer/NewNotePopup/PopupVContainer" unique_id=1491420112]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 10
+
+[node name="PopupNewNoteTitle" type="LineEdit" parent="NotesMainContainer/NewNotePopup/PopupVContainer/PopupMarginContainer" unique_id=2071704086]
+unique_name_in_owner = true
+layout_mode = 2
+theme = SubResource("Theme_eukc0")
+placeholder_text = "Note title..."
+context_menu_enabled = false
+emoji_menu_enabled = false
+clear_button_enabled = true
+
+[node name="PopupButtonsHContainer" type="HBoxContainer" parent="NotesMainContainer/NewNotePopup/PopupVContainer" unique_id=586760554]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CancelButtonContainer" type="MarginContainer" parent="NotesMainContainer/NewNotePopup/PopupVContainer/PopupButtonsHContainer" unique_id=432597625]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_right = 15
+
+[node name="CancelButton" type="Button" parent="NotesMainContainer/NewNotePopup/PopupVContainer/PopupButtonsHContainer/CancelButtonContainer" unique_id=897817139]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 10
+text = "Cancel"
+
+[node name="ConfirmButtonContainer" type="MarginContainer" parent="NotesMainContainer/NewNotePopup/PopupVContainer/PopupButtonsHContainer" unique_id=1383758820]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_right = 15
+
+[node name="ConfirmButton" type="Button" parent="NotesMainContainer/NewNotePopup/PopupVContainer/PopupButtonsHContainer/ConfirmButtonContainer" unique_id=153140491]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 10
+text = "Confirm"
 
 [connection signal="pressed" from="NotesMainContainer/NotesContentContainer/NotesMenuContainer/NotesAddButton" to="." method="_OnNotesAddButtonPressed"]
+[connection signal="pressed" from="NotesMainContainer/NewNotePopup/PopupVContainer/PopupButtonsHContainer/CancelButtonContainer/CancelButton" to="." method="_OnCancelButtonPressed"]
+[connection signal="pressed" from="NotesMainContainer/NewNotePopup/PopupVContainer/PopupButtonsHContainer/ConfirmButtonContainer/ConfirmButton" to="." method="_OnConfirmButtonPressed"]
