@@ -1,5 +1,1 @@
-res://modules/notes_json/components/NotesHomepage.tscn
 res://modules/notes_json/components/scr/NotesHomepage.cs
-res://modules/notepad/Notepad.cs
-res://modules/notes_json/components/NewNotePopup.tscn
-res://modules/notes_json/components/scr/NewNotePopup.cs

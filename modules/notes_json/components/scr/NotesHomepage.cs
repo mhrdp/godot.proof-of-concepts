@@ -12,6 +12,8 @@ public partial class NotesHomepage : Control
     // INIT NOTE CONTAINER NODE
     private Button newNoteButton;
 
+    private string newNoteTitle = "";
+
 
     public override void _Ready()
     {
@@ -25,6 +27,10 @@ public partial class NotesHomepage : Control
     public override void _Process(double delta)
     {
     }
+
+
+    // *** CUSTUM FUNCTIONS ***//
+    // NEW NOTE FUNCTIONS //
 
 
     // *** SIGNAL *** //
@@ -44,5 +50,7 @@ public partial class NotesHomepage : Control
     {
         newNoteButton.Disabled = false;
         newNotePopup.Visible = false;
+
+        newNoteTitle = popupNewNoteTitle.Text;
     }
 }

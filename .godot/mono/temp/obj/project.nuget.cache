@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "g1DXjPze1fY=",
+  "dgSpecHash": "9DolyoF0aTtuWTYG50YBfj9EJHFpSRy/fsYcCMmCPByAYoy1Zstz3QQtyr/FsfJFnaUafXZwwTdgALOmeCRNwQ==",
   "success": true,
-  "projectFilePath": "E:\\Program\\GitHub\\godot.proof-of-concepts\\Proof of Concepts.csproj",
+  "projectFilePath": "/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/Proof of Concepts.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Mahardhika\\.nuget\\packages\\godot.sourcegenerators\\4.6.1\\godot.sourcegenerators.4.6.1.nupkg.sha512",
-    "C:\\Users\\Mahardhika\\.nuget\\packages\\godotsharp\\4.6.1\\godotsharp.4.6.1.nupkg.sha512",
-    "C:\\Users\\Mahardhika\\.nuget\\packages\\godotsharpeditor\\4.6.1\\godotsharpeditor.4.6.1.nupkg.sha512"
+    "/home/mahardhika/.nuget/packages/godot.sourcegenerators/4.6.1/godot.sourcegenerators.4.6.1.nupkg.sha512",
+    "/home/mahardhika/.nuget/packages/godotsharp/4.6.1/godotsharp.4.6.1.nupkg.sha512",
+    "/home/mahardhika/.nuget/packages/godotsharpeditor/4.6.1/godotsharpeditor.4.6.1.nupkg.sha512",
+    "/home/mahardhika/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.23/microsoft.aspnetcore.app.ref.8.0.23.nupkg.sha512"
   ],
   "logs": []
 }

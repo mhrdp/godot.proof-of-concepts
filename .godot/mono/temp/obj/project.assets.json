@@ -88,19 +88,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mahardhika\\.nuget\\packages\\": {}
+    "/home/mahardhika/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Program\\GitHub\\godot.proof-of-concepts\\Proof of Concepts.csproj",
+      "projectUniqueName": "/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/Proof of Concepts.csproj",
       "projectName": "Proof of Concepts",
-      "projectPath": "E:\\Program\\GitHub\\godot.proof-of-concepts\\Proof of Concepts.csproj",
-      "packagesPath": "C:\\Users\\Mahardhika\\.nuget\\packages\\",
-      "outputPath": "E:\\Program\\GitHub\\godot.proof-of-concepts\\.godot\\mono\\temp\\obj\\",
+      "projectPath": "/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/Proof of Concepts.csproj",
+      "packagesPath": "/home/mahardhika/.nuget/packages/",
+      "outputPath": "/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Mahardhika\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/mahardhika/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -118,11 +118,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -156,12 +151,18 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.23, 8.0.23]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.123/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
