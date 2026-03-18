@@ -101,7 +101,7 @@ layout_mode = 2
 text = "Saved Notes"
 clip_text = true
 
-[node name="ListOfNotesContainer" type="MarginContainer" parent="NotesMainContainer/NotesSidebarContainer/NotesSidebarColor/ScrollContainer/NotesSidebar" unique_id=1362433459]
+[node name="NotesContainer" type="MarginContainer" parent="NotesMainContainer/NotesSidebarContainer/NotesSidebarColor/ScrollContainer/NotesSidebar" unique_id=1362433459]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -110,11 +110,11 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 5
 
-[node name="ListOfNotesBG" type="ColorRect" parent="NotesMainContainer/NotesSidebarContainer/NotesSidebarColor/ScrollContainer/NotesSidebar/ListOfNotesContainer" unique_id=2005559651]
+[node name="NoteBG" type="ColorRect" parent="NotesMainContainer/NotesSidebarContainer/NotesSidebarColor/ScrollContainer/NotesSidebar/NotesContainer" unique_id=2005559651]
 layout_mode = 2
 color = Color(0.2, 0.2, 0.2, 1)
 
-[node name="NotesTitle" type="Label" parent="NotesMainContainer/NotesSidebarContainer/NotesSidebarColor/ScrollContainer/NotesSidebar/ListOfNotesContainer/ListOfNotesBG" unique_id=1713238151]
+[node name="NoteTitle" type="Label" parent="NotesMainContainer/NotesSidebarContainer/NotesSidebarColor/ScrollContainer/NotesSidebar/NotesContainer/NoteBG" unique_id=1713238151]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -128,7 +128,7 @@ label_settings = SubResource("LabelSettings_vrvfc")
 clip_text = true
 text_overrun_behavior = 4
 
-[node name="NotesTitle2" type="Label" parent="NotesMainContainer/NotesSidebarContainer/NotesSidebarColor/ScrollContainer/NotesSidebar/ListOfNotesContainer/ListOfNotesBG" unique_id=578733755]
+[node name="NoteContent" type="Label" parent="NotesMainContainer/NotesSidebarContainer/NotesSidebarColor/ScrollContainer/NotesSidebar/NotesContainer/NoteBG" unique_id=578733755]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
