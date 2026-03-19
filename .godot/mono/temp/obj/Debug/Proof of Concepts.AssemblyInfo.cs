@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Proof of Concepts")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c011c553eb057c4a4b67817f43cb43d43d21adf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0287496fbb1bfa143b193f5e999efa6c7af04f85")]
 [assembly: System.Reflection.AssemblyProductAttribute("Proof of Concepts")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Proof of Concepts")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

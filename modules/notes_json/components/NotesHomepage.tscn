@@ -143,43 +143,43 @@ autowrap_mode = 3
 clip_text = true
 text_overrun_behavior = 4
 
-[node name="NotesContentContainer" type="VBoxContainer" parent="NotesMainContainer" unique_id=1236054753]
+[node name="NoteContentsContainer" type="VBoxContainer" parent="NotesMainContainer" unique_id=1236054753]
 custom_minimum_size = Vector2(720, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="NotesMenuContainer" type="HBoxContainer" parent="NotesMainContainer/NotesContentContainer" unique_id=2060887997]
+[node name="NoteMenusContainer" type="HBoxContainer" parent="NotesMainContainer/NoteContentsContainer" unique_id=2060887997]
 custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 alignment = 2
 
-[node name="NotesUndoButton" type="Button" parent="NotesMainContainer/NotesContentContainer/NotesMenuContainer" unique_id=915964526]
+[node name="NotesUndoButton" type="Button" parent="NotesMainContainer/NoteContentsContainer/NoteMenusContainer" unique_id=915964526]
 layout_mode = 2
 disabled = true
 icon = ExtResource("2_kyeks")
 icon_alignment = 1
 
-[node name="NotesRedoButton" type="Button" parent="NotesMainContainer/NotesContentContainer/NotesMenuContainer" unique_id=1291227415]
+[node name="NotesRedoButton" type="Button" parent="NotesMainContainer/NoteContentsContainer/NoteMenusContainer" unique_id=1291227415]
 layout_mode = 2
 disabled = true
 icon = ExtResource("3_eukc0")
 icon_alignment = 1
 
-[node name="NotesSaveButton" type="Button" parent="NotesMainContainer/NotesContentContainer/NotesMenuContainer" unique_id=1373389678]
+[node name="NotesSaveButton" type="Button" parent="NotesMainContainer/NoteContentsContainer/NoteMenusContainer" unique_id=1373389678]
 layout_mode = 2
 disabled = true
 icon = ExtResource("1_vamrd")
 icon_alignment = 1
 
-[node name="NotesAddButton" type="Button" parent="NotesMainContainer/NotesContentContainer/NotesMenuContainer" unique_id=1505935013]
+[node name="NotesAddButton" type="Button" parent="NotesMainContainer/NoteContentsContainer/NoteMenusContainer" unique_id=1505935013]
 unique_name_in_owner = true
 layout_mode = 2
 toggle_mode = true
 icon = ExtResource("1_vrvfc")
 icon_alignment = 1
 
-[node name="NotesContentContainer" type="ScrollContainer" parent="NotesMainContainer/NotesContentContainer" unique_id=308687042]
+[node name="NoteContentContainer" type="ScrollContainer" parent="NotesMainContainer/NoteContentsContainer" unique_id=308687042]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -187,13 +187,14 @@ theme = SubResource("Theme_kyeks")
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 2
 
-[node name="NotesContentBG" type="ColorRect" parent="NotesMainContainer/NotesContentContainer/NotesContentContainer" unique_id=585355855]
+[node name="NoteContentBG" type="ColorRect" parent="NotesMainContainer/NoteContentsContainer/NoteContentContainer" unique_id=585355855]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(0.201527, 0.201527, 0.201527, 1)
 
-[node name="NotesContentMargin" type="MarginContainer" parent="NotesMainContainer/NotesContentContainer/NotesContentContainer/NotesContentBG" unique_id=1574063332]
+[node name="NoteContentMargin" type="MarginContainer" parent="NotesMainContainer/NoteContentsContainer/NoteContentContainer/NoteContentBG" unique_id=1574063332]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -205,11 +206,21 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="NotesContent" type="TextEdit" parent="NotesMainContainer/NotesContentContainer/NotesContentContainer/NotesContentBG/NotesContentMargin" unique_id=1277290222]
+[node name="NoteContent" type="TextEdit" parent="NotesMainContainer/NoteContentsContainer/NoteContentContainer/NoteContentBG/NoteContentMargin" unique_id=1277290222]
 layout_mode = 2
 theme_override_colors/background_color = Color(0.2, 0.2, 0.2, 1)
 placeholder_text = "Write your note here..."
 virtual_keyboard_enabled = false
+
+[node name="NotePlaceholder" type="Label" parent="NotesMainContainer/NoteContentsContainer/NoteContentContainer/NoteContentBG" unique_id=1555653133]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 816.0
+offset_bottom = 678.0
+text = "TO CREATE A NEW NOTE
+PRESS +"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="NewNotePopup" type="Popup" parent="NotesMainContainer" unique_id=173568023]
 unique_name_in_owner = true
@@ -271,6 +282,6 @@ size_flags_vertical = 4
 theme_override_font_sizes/font_size = 10
 text = "Confirm"
 
-[connection signal="pressed" from="NotesMainContainer/NotesContentContainer/NotesMenuContainer/NotesAddButton" to="." method="_OnNotesAddButtonPressed"]
+[connection signal="pressed" from="NotesMainContainer/NoteContentsContainer/NoteMenusContainer/NotesAddButton" to="." method="_OnNotesAddButtonPressed"]
 [connection signal="pressed" from="NotesMainContainer/NewNotePopup/PopupVContainer/PopupButtonsHContainer/CancelButtonContainer/CancelButton" to="." method="_OnCancelButtonPressed"]
 [connection signal="pressed" from="NotesMainContainer/NewNotePopup/PopupVContainer/PopupButtonsHContainer/ConfirmButtonContainer/ConfirmButton" to="." method="_OnConfirmButtonPressed"]

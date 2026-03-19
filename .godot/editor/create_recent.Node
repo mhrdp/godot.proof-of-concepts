@@ -1,3 +1,4 @@
+Label
 TextEdit
 Button
 Control
@@ -10,6 +11,4 @@ ScrollContainer
 ColorRect
 VScrollBar
 HScrollBar
-Label
 MarginContainer
-TextureRect

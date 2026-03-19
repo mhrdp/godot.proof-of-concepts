@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="SavedNotes" format=3 uid="uid://c2253bouv6aak"]
+
+[ext_resource type="Script" uid="uid://c45ox7tjjloqn" path="res://modules/notes_json/components/scr/SavedNotes.cs" id="1_1bg6k"]
+
+[resource]
+script = ExtResource("1_1bg6k")

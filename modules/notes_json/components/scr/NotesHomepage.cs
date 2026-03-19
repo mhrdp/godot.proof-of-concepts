@@ -10,7 +10,9 @@ public partial class NotesHomepage : Control
     private LineEdit popupNewNoteTitle;
 
     // INIT NOTE CONTAINER NODE
+    private MarginContainer noteContentMargin;
     private Button newNoteButton;
+    private Label notePlaceholder;
 
     private string newNoteTitle = "";
 
@@ -22,6 +24,13 @@ public partial class NotesHomepage : Control
         popupConfirmButton = GetNode<Button>("%ConfirmButton");
         popupCancelButton = GetNode<Button>("%CancelButton");
         popupNewNoteTitle = GetNode<LineEdit>("%PopupNewNoteTitle");
+        noteContentMargin = GetNode<MarginContainer>("%NoteContentMargin");
+        notePlaceholder = GetNode<Label>("%NotePlaceholder");
+
+
+        newNotePopup.Visible = false;
+        noteContentMargin.Visible = false;
+        notePlaceholder.Visible = true;
     }
 
     public override void _Process(double delta)
@@ -44,6 +53,7 @@ public partial class NotesHomepage : Control
     {
         newNoteButton.Disabled = false;
         newNotePopup.Visible = false;
+        notePlaceholder.Visible = true;
     }
 
     private void _OnConfirmButtonPressed()

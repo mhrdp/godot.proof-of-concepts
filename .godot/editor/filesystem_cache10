@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1773870683
+::res://::1773926633
 README.md::TextFile::-1::1773842791::0::1::::<><><>0<>0<><>::
 ::res://addons/::1773842791
 ::res://addons/icon_browser/::1773842791
@@ -175,7 +175,8 @@ notepad.tscn::PackedScene::3010665808766822660::1773842791::0::1::::<><><>0<>0<>
 README.md::TextFile::-1::1773842791::0::1::::<><><>0<>0<><>::
 ::res://modules/notes_json/assets/::1773842791
 add_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg::CompressedTexture2D::2670563333870991661::1773842791::1773842791::1::::<><><>0<>0<>edf838331083a47de7b6339d8e8345e9<>res://.godot/imported/add_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg-46ac23130b8e783bee87e48bfec93b15.ctex::
-::res://modules/notes_json/components/::1773842791
-NotesHomepage.tscn::PackedScene::524589162560379993::1773842791::0::1::::<><><>0<>0<><>::uid://dala5tkj7y06s::::res://modules/notes_json/components/scr/NotesHomepage.cs<>uid://bs64fuoehlpna::::res://assets/imgs/icons/save.png<>uid://bebv1138p1m58::::res://modules/notes_json/assets/add_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg<>uid://c6fa8o0lq4rl0::::res://assets/imgs/icons/undo.png<>uid://chqst7n57r6dm::::res://assets/imgs/icons/redo.png
-::res://modules/notes_json/components/scr/::1773842791
-NotesHomepage.cs::CSharpScript::7182024794035459316::1773842791::0::1::::<>Control<><>0<>0<><>::
+::res://modules/notes_json/components/::1773923628
+NotesHomepage.tscn::PackedScene::524589162560379993::1773923122::0::1::::<><><>0<>0<><>::uid://dala5tkj7y06s::::res://modules/notes_json/components/scr/NotesHomepage.cs<>uid://bs64fuoehlpna::::res://assets/imgs/icons/save.png<>uid://bebv1138p1m58::::res://modules/notes_json/assets/add_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg<>uid://c6fa8o0lq4rl0::::res://assets/imgs/icons/undo.png<>uid://chqst7n57r6dm::::res://assets/imgs/icons/redo.png
+SavedNotes.tres::Resource::6725549932073623378::1773923628::0::1::::<><><>0<>0<><>::
+::res://modules/notes_json/components/scr/::1773923109
+NotesHomepage.cs::CSharpScript::7182024794035459316::1773923109::0::1::::<>Control<><>0<>0<><>::
