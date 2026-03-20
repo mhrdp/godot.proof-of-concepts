@@ -16,21 +16,21 @@
 /mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.pdb
 /mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.genruntimeconfig.cache
 /mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/ref/Proof of Concepts.dll
-E:\Program\GitHub\godot.proof-of-concepts\.godot\mono\temp\bin\Debug\Proof of Concepts.deps.json
-E:\Program\GitHub\godot.proof-of-concepts\.godot\mono\temp\bin\Debug\Proof of Concepts.runtimeconfig.json
-E:\Program\GitHub\godot.proof-of-concepts\.godot\mono\temp\bin\Debug\Proof of Concepts.dll
-E:\Program\GitHub\godot.proof-of-concepts\.godot\mono\temp\bin\Debug\Proof of Concepts.pdb
-E:\Program\GitHub\godot.proof-of-concepts\.godot\mono\temp\bin\Debug\GodotSharp.dll
-E:\Program\GitHub\godot.proof-of-concepts\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
-E:\Program\GitHub\godot.proof-of-concepts\.godot\mono\temp\obj\Debug\Proof of Concepts.csproj.AssemblyReference.cache
-E:\Program\GitHub\godot.proof-of-concepts\.godot\mono\temp\obj\Debug\Proof of Concepts.GeneratedMSBuildEditorConfig.editorconfig
-E:\Program\GitHub\godot.proof-of-concepts\.godot\mono\temp\obj\Debug\Proof of Concepts.AssemblyInfoInputs.cache
-E:\Program\GitHub\godot.proof-of-concepts\.godot\mono\temp\obj\Debug\Proof of Concepts.AssemblyInfo.cs
-E:\Program\GitHub\godot.proof-of-concepts\.godot\mono\temp\obj\Debug\Proof of Concepts.csproj.CoreCompileInputs.cache
-E:\Program\GitHub\godot.proof-of-concepts\.godot\mono\temp\obj\Debug\Proof of Concepts.sourcelink.json
-E:\Program\GitHub\godot.proof-of-concepts\.godot\mono\temp\obj\Debug\Proof of.0F328530.Up2Date
-E:\Program\GitHub\godot.proof-of-concepts\.godot\mono\temp\obj\Debug\Proof of Concepts.dll
-E:\Program\GitHub\godot.proof-of-concepts\.godot\mono\temp\obj\Debug\refint\Proof of Concepts.dll
-E:\Program\GitHub\godot.proof-of-concepts\.godot\mono\temp\obj\Debug\Proof of Concepts.pdb
-E:\Program\GitHub\godot.proof-of-concepts\.godot\mono\temp\obj\Debug\Proof of Concepts.genruntimeconfig.cache
-E:\Program\GitHub\godot.proof-of-concepts\.godot\mono\temp\obj\Debug\ref\Proof of Concepts.dll
+E:/Program/GitHub/godot.proof-of-concepts/.godot/mono/temp/bin/Debug/Proof of Concepts.deps.json
+E:/Program/GitHub/godot.proof-of-concepts/.godot/mono/temp/bin/Debug/Proof of Concepts.runtimeconfig.json
+E:/Program/GitHub/godot.proof-of-concepts/.godot/mono/temp/bin/Debug/Proof of Concepts.dll
+E:/Program/GitHub/godot.proof-of-concepts/.godot/mono/temp/bin/Debug/Proof of Concepts.pdb
+E:/Program/GitHub/godot.proof-of-concepts/.godot/mono/temp/bin/Debug/GodotSharp.dll
+E:/Program/GitHub/godot.proof-of-concepts/.godot/mono/temp/bin/Debug/GodotSharpEditor.dll
+E:/Program/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.csproj.AssemblyReference.cache
+E:/Program/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.GeneratedMSBuildEditorConfig.editorconfig
+E:/Program/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.AssemblyInfoInputs.cache
+E:/Program/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.AssemblyInfo.cs
+E:/Program/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.csproj.CoreCompileInputs.cache
+E:/Program/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.sourcelink.json
+E:/Program/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of.0F328530.Up2Date
+E:/Program/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.dll
+E:/Program/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/refint/Proof of Concepts.dll
+E:/Program/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.pdb
+E:/Program/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.genruntimeconfig.cache
+E:/Program/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/ref/Proof of Concepts.dll

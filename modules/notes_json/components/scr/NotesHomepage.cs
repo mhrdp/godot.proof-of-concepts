@@ -15,7 +15,9 @@ public partial class NotesHomepage : Control
     private Label notePlaceholder;
 
     private string newNoteTitle = "";
+    private int noteUid = 0;
 
+    [Export] public Resource noteContentResource;
 
     public override void _Ready()
     {
@@ -62,5 +64,41 @@ public partial class NotesHomepage : Control
         newNotePopup.Visible = false;
 
         newNoteTitle = popupNewNoteTitle.Text;
+        notePlaceholder.Visible = false;
+        noteContentMargin.Visible = true;
+
+        string noteSaveDir = "res://modules/notes_json/components/res/notes/";
+
+        if (Godot.DirAccess.DirExistsAbsolute(noteSaveDir)==false)
+        {
+            Godot.DirAccess.MakeDirRecursiveAbsolute(noteSaveDir);
+        }
+
+        if (Godot.DirAccess.DirExistsAbsolute(noteSaveDir)==true) 
+        {
+            string[] files = Godot.DirAccess.GetFilesAt(noteSaveDir);
+            int numOfFiles = files.Length;
+            switch (numOfFiles)
+            {
+                case 0:
+                    noteUid = 1;
+                    break;
+
+                case >=1:
+                    noteUid = numOfFiles + 1;
+                    break;
+            }
+        }
+
+        SavedNotes noteData = new SavedNotes();
+        noteData.NoteUid = noteUid;
+        noteData.NoteContent = null;
+        noteData.NoteTitle = newNoteTitle;
+        noteData.NoteDatetime = Godot.Time.GetDatetimeStringFromSystem();
+        Error saveStatus = Godot.ResourceSaver.Save(noteData, noteSaveDir);
+        if (saveStatus==Error.Ok)
+        {
+            GD.Print("Saved!");
+        }
     }
 }

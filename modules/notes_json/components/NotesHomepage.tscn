@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dala5tkj7y06s" path="res://modules/notes_json/components/scr/NotesHomepage.cs" id="1_kyeks"]
 [ext_resource type="Texture2D" uid="uid://bs64fuoehlpna" path="res://assets/imgs/icons/save.png" id="1_vamrd"]
 [ext_resource type="Texture2D" uid="uid://bebv1138p1m58" path="res://modules/notes_json/assets/add_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" id="1_vrvfc"]
+[ext_resource type="Resource" uid="uid://c2253bouv6aak" path="res://modules/notes_json/components/SavedNotes.tres" id="2_eukc0"]
 [ext_resource type="Texture2D" uid="uid://c6fa8o0lq4rl0" path="res://assets/imgs/icons/undo.png" id="2_kyeks"]
 [ext_resource type="Texture2D" uid="uid://chqst7n57r6dm" path="res://assets/imgs/icons/redo.png" id="3_eukc0"]
 
@@ -49,6 +50,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kyeks")
+noteContentResource = ExtResource("2_eukc0")
 
 [node name="NotesMainContainer" type="HSplitContainer" parent="." unique_id=644200548]
 layout_mode = 1
