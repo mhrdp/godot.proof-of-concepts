@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1774041124
+::res://::1774067929
 README.md::TextFile::-1::1773842791::0::1::::<><><>0<>0<><>::
 ::res://addons/::1773842791
 ::res://addons/icon_browser/::1773842791
@@ -178,6 +178,6 @@ add_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg::CompressedTexture2D::26705633338
 ::res://modules/notes_json/components/::1773941136
 NotesHomepage.tscn::PackedScene::524589162560379993::1773941136::0::1::::<><><>0<>0<><>::uid://dala5tkj7y06s::::res://modules/notes_json/components/scr/NotesHomepage.cs<>uid://bs64fuoehlpna::::res://assets/imgs/icons/save.png<>uid://bebv1138p1m58::::res://modules/notes_json/assets/add_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg<>uid://c2253bouv6aak::::res://modules/notes_json/components/SavedNotes.tres<>uid://c6fa8o0lq4rl0::::res://assets/imgs/icons/undo.png<>uid://chqst7n57r6dm::::res://assets/imgs/icons/redo.png
 SavedNotes.tres::Resource/SavedNotes::6725549932073623378::1773928043::0::1::::<><><>0<>0<><>::uid://c45ox7tjjloqn::::res://modules/notes_json/components/scr/SavedNotes.cs
-::res://modules/notes_json/components/scr/::1774010611
-NotesHomepage.cs::CSharpScript::7182024794035459316::1774010611::0::1::::<>Control<><>0<>0<><>::
-SavedNotes.cs::CSharpScript::6871141987189361069::1773927979::0::1::::SavedNotes<>Resource<><>0<>0<><>::
+::res://modules/notes_json/components/scr/::1774047912
+NotesHomepage.cs::CSharpScript::7182024794035459316::1774047912::0::1::::<>Control<><>0<>0<><>::
+SavedNotes.cs::CSharpScript::6871141987189361069::1774044865::0::1::::SavedNotes<>Resource<><>0<>0<><>::

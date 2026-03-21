@@ -16,6 +16,7 @@ public partial class NotesHomepage : Control
 
     private string newNoteTitle = "";
     private int noteUid = 0;
+    private string noteSaveDir = "res://modules/notes_json/components/res/notes/";
 
     [Export] public Resource noteContentResource;
 
@@ -29,14 +30,26 @@ public partial class NotesHomepage : Control
         noteContentMargin = GetNode<MarginContainer>("%NoteContentMargin");
         notePlaceholder = GetNode<Label>("%NotePlaceholder");
 
-
         newNotePopup.Visible = false;
         noteContentMargin.Visible = false;
         notePlaceholder.Visible = true;
+
+        if (Godot.DirAccess.DirExistsAbsolute(noteSaveDir)==false)
+        {
+            Godot.DirAccess.MakeDirRecursiveAbsolute(noteSaveDir);
+        }
     }
 
     public override void _Process(double delta)
     {
+        if (popupNewNoteTitle.Text=="")
+        {
+            popupConfirmButton.Disabled = true;
+        }
+        if (popupNewNoteTitle.Text!="")
+        {
+            popupConfirmButton.Disabled = false;
+        }
     }
 
 
@@ -67,13 +80,6 @@ public partial class NotesHomepage : Control
         notePlaceholder.Visible = false;
         noteContentMargin.Visible = true;
 
-        string noteSaveDir = "res://modules/notes_json/components/res/notes/";
-
-        if (Godot.DirAccess.DirExistsAbsolute(noteSaveDir)==false)
-        {
-            Godot.DirAccess.MakeDirRecursiveAbsolute(noteSaveDir);
-        }
-
         if (Godot.DirAccess.DirExistsAbsolute(noteSaveDir)==true) 
         {
             string[] files = Godot.DirAccess.GetFilesAt(noteSaveDir);
@@ -90,12 +96,13 @@ public partial class NotesHomepage : Control
             }
         }
 
+        string savedFile = $"{noteSaveDir}note_{noteUid}.res";
         SavedNotes noteData = new SavedNotes();
         noteData.NoteUid = noteUid;
         noteData.NoteContent = null;
         noteData.NoteTitle = newNoteTitle;
-        noteData.NoteDatetime = Godot.Time.GetDatetimeStringFromSystem();
-        Error saveStatus = Godot.ResourceSaver.Save(noteData, noteSaveDir);
+        noteData.NoteDatetime = Godot.Time.GetDatetimeStringFromSystem(); 
+        Error saveStatus = Godot.ResourceSaver.Save(noteData, savedFile);
         if (saveStatus==Error.Ok)
         {
             GD.Print("Saved!");
