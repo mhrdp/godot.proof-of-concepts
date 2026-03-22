@@ -18,7 +18,8 @@ public partial class NotesHomepage : Control
     private string newNoteTitle = "";
     private int noteUid = 0;
     private string noteSaveDir = "res://modules/notes_json/components/res/notes/";
-    string jsonPath = "res://modules/notes_json/components/res/notes/note_data_json.json";
+    private string jsonPath = "res://modules/notes_json/components/res/notes/note_data_json.json";
+    private List<NoteValuesType> jsonList = new ();
 
     [Export] public Resource noteContentResource;
 
@@ -81,12 +82,28 @@ public partial class NotesHomepage : Control
     // *** SIGNAL *** //
     private void _OnNotesAddButtonPressed()
     {
+        // Button behavior
         newNotePopup.Visible = true;
         newNoteButton.Disabled = true;
+
+        // Deserialize JSON containing note data
+        using var jsonFile = FileAccess.Open(jsonPath, FileAccess.ModeFlags.Read);
+        string jsonString = jsonFile.GetAsText();
+        Json json = new Json();
+        Error error = json.Parse(jsonString);
+        if (error==Error.Ok)
+        {
+            jsonList = JsonSerializer.Deserialize<List< NoteValuesType>>(jsonString);
+        }
+        else
+        {
+            GD.PrintErr($"JSON parse error: {json.GetErrorMessage()} at line {json.GetErrorLine()}")
+        }
     }
 
     private void _OnCancelButtonPressed()
     {
+        // Button behavior
         newNoteButton.Disabled = false;
         newNotePopup.Visible = false;
         notePlaceholder.Visible = true;
@@ -94,6 +111,7 @@ public partial class NotesHomepage : Control
 
     private void _OnConfirmButtonPressed()
     {
+        // Button behavior
         newNoteButton.Disabled = false;
         newNotePopup.Visible = false;
 
@@ -101,6 +119,7 @@ public partial class NotesHomepage : Control
         notePlaceholder.Visible = false;
         noteContentMargin.Visible = true;
 
+        // Get Uid for note
         if (Godot.DirAccess.DirExistsAbsolute(noteSaveDir)==true) 
         {
             string[] files = Godot.DirAccess.GetFilesAt(noteSaveDir);
@@ -117,6 +136,7 @@ public partial class NotesHomepage : Control
             }
         }
 
+        // Create Note's custom resource binary data (*.res)
         string savedFile = $"{noteSaveDir}note_{noteUid}.res";
         SavedNotes noteData = new SavedNotes();
 
@@ -132,17 +152,7 @@ public partial class NotesHomepage : Control
             GD.Print("Saved!");
         }
 
-
-        using var file = FileAccess.Open(jsonPath, FileAccess.ModeFlags.Read);
-        string jsonString = file.GetAsText();
-        Json json = new Json();
-        Error error = json.Parse(jsonString);
-        List<NoteValuesType> jsonList = new ();
-        if (error==Error.Ok)
-        {
-            jsonList = JsonSerializer.Deserialize<List< NoteValuesType>>(jsonString);
-        }
-
+        // Note's data as Json's list
         jsonList.Add(
                new NoteValuesType
                {
