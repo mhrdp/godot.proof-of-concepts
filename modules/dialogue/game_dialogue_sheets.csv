@@ -1,0 +1,12 @@
+dialogueId,characterSpriteId,characterName,characterPosition,typeOfDialogue,jumpToId,dialogueLine
+1,sprite_01,default,left,dialogue,,test_dialogue01
+2,sprite_01,default,right,dialogue,,test_dialogue02
+3,sprite_02,Nona,left,dialogue,,test_dialogue03
+4,,,,choice,5,test_choice01
+4,,,,choice,7,test_choice02
+5,sprite_02,Nona,left,dialogue,,test_after_choice01_01
+6,sprite_01,default,right,dialogue,9,test_after_choice01_02
+7,sprite_01,default,right,dialogue,,test_after_choice02_01
+8,sprite_02,Nona,left,dialogue,9,test_after_choice02_02
+9,sprite_01,default,middle,dialogue,,test_dialogue04
+10,sprite_02,Nona,left,dialogue,,test_dialogue05

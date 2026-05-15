@@ -1,14 +1,14 @@
+RichTextLabel
 Label
+ColorRect
 TextEdit
 Button
 Control
 HBoxContainer
-RichTextLabel
 PanelContainer
 Container
 VBoxContainer
 ScrollContainer
-ColorRect
 VScrollBar
 HScrollBar
 MarginContainer

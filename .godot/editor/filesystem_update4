@@ -1,2 +1,2 @@
-res://modules/notes_json/components/scr/SavedNotes.cs
-res://modules/notes_json/components/scr/NotesHomepage.cs
+res://modules/dialogue/dialogue.tscn
+res://modules/dialogue/DialogueBox.cs
