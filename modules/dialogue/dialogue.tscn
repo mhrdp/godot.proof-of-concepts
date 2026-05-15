@@ -19,6 +19,7 @@ color = Color(0.48178947, 0.48178947, 0.48178947, 1)
 script = ExtResource("1_toscr")
 
 [node name="NameLabel" type="Label" parent="DialogueBox" unique_id=949331692]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 15.0
 offset_right = 95.0
@@ -26,6 +27,7 @@ offset_bottom = 23.0
 text = "name_box"
 
 [node name="DialogueLabel" type="RichTextLabel" parent="DialogueBox" unique_id=1891108303]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 40.0
 offset_top = 35.0

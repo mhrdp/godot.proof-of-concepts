@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/Proof of Concepts.csproj": {}
+    "/home/mahardhika/Documents/GitHub/godot.proof-of-concepts/Proof of Concepts.csproj": {}
   },
   "projects": {
-    "/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/Proof of Concepts.csproj": {
+    "/home/mahardhika/Documents/GitHub/godot.proof-of-concepts/Proof of Concepts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/Proof of Concepts.csproj",
+        "projectUniqueName": "/home/mahardhika/Documents/GitHub/godot.proof-of-concepts/Proof of Concepts.csproj",
         "projectName": "Proof of Concepts",
-        "projectPath": "/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/Proof of Concepts.csproj",
+        "projectPath": "/home/mahardhika/Documents/GitHub/godot.proof-of-concepts/Proof of Concepts.csproj",
         "packagesPath": "/home/mahardhika/.nuget/packages/",
-        "outputPath": "/mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/",
+        "outputPath": "/home/mahardhika/Documents/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/mahardhika/.nuget/NuGet/NuGet.Config"
@@ -40,17 +40,17 @@
           "dependencies": {
             "Godot.SourceGenerators": {
               "target": "Package",
-              "version": "[4.6.1, )",
+              "version": "[4.6.2, )",
               "autoReferenced": true
             },
             "GodotSharp": {
               "target": "Package",
-              "version": "[4.6.1, )",
+              "version": "[4.6.2, )",
               "autoReferenced": true
             },
             "GodotSharpEditor": {
               "target": "Package",
-              "version": "[4.6.1, )",
+              "version": "[4.6.2, )",
               "autoReferenced": true
             }
           },
@@ -68,7 +68,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.23, 8.0.23]"
+              "version": "[8.0.25, 8.0.25]"
             }
           ],
           "frameworkReferences": {
@@ -76,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.123/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.125/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

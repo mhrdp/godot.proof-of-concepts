@@ -97,7 +97,7 @@ public partial class NotesHomepage : Control
         }
         else
         {
-            GD.PrintErr($"JSON parse error: {json.GetErrorMessage()} at line {json.GetErrorLine()}")
+            GD.PrintErr($"JSON parse error: {json.GetErrorMessage()} at line {json.GetErrorLine()}");
         }
     }
 

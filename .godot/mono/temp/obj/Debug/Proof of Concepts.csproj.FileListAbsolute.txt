@@ -34,3 +34,21 @@ E:/Program/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/refint/Proo
 E:/Program/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.pdb
 E:/Program/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.genruntimeconfig.cache
 E:/Program/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/ref/Proof of Concepts.dll
+/home/mahardhika/Documents/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.csproj.AssemblyReference.cache
+/home/mahardhika/Documents/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.GeneratedMSBuildEditorConfig.editorconfig
+/home/mahardhika/Documents/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.AssemblyInfoInputs.cache
+/home/mahardhika/Documents/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.AssemblyInfo.cs
+/home/mahardhika/Documents/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.csproj.CoreCompileInputs.cache
+/home/mahardhika/Documents/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.sourcelink.json
+/home/mahardhika/Documents/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.dll
+/home/mahardhika/Documents/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/refint/Proof of Concepts.dll
+/home/mahardhika/Documents/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.pdb
+/home/mahardhika/Documents/GitHub/godot.proof-of-concepts/.godot/mono/temp/bin/Debug/Proof of Concepts.deps.json
+/home/mahardhika/Documents/GitHub/godot.proof-of-concepts/.godot/mono/temp/bin/Debug/Proof of Concepts.runtimeconfig.json
+/home/mahardhika/Documents/GitHub/godot.proof-of-concepts/.godot/mono/temp/bin/Debug/Proof of Concepts.dll
+/home/mahardhika/Documents/GitHub/godot.proof-of-concepts/.godot/mono/temp/bin/Debug/Proof of Concepts.pdb
+/home/mahardhika/Documents/GitHub/godot.proof-of-concepts/.godot/mono/temp/bin/Debug/GodotSharp.dll
+/home/mahardhika/Documents/GitHub/godot.proof-of-concepts/.godot/mono/temp/bin/Debug/GodotSharpEditor.dll
+/home/mahardhika/Documents/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.csproj.CopyComplete
+/home/mahardhika/Documents/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/Proof of Concepts.genruntimeconfig.cache
+/home/mahardhika/Documents/GitHub/godot.proof-of-concepts/.godot/mono/temp/obj/Debug/ref/Proof of Concepts.dll

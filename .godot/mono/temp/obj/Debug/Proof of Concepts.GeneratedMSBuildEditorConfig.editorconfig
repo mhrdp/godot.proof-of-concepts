@@ -1,6 +1,6 @@
 is_global = true
 build_property.GodotDisabledSourceGenerators = 
-build_property.GodotProjectDir = /mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/
+build_property.GodotProjectDir = /home/mahardhika/Documents/GitHub/godot.proof-of-concepts/
 build_property.GodotProjectDirBase64 = 
 build_property.GodotSourceGenerators = 
 build_property.IsGodotToolsProject = 
@@ -13,6 +13,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ProofofConcepts
-build_property.ProjectDir = /mnt/win_drive_d/Projects/GitHub/godot.proof-of-concepts/
+build_property.ProjectDir = /home/mahardhika/Documents/GitHub/godot.proof-of-concepts/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
