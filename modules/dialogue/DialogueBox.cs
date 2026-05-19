@@ -1,56 +1,75 @@
 using Godot;
-using System;
-using System.Data;
-using System.Linq;
-using System.IO;
 using System.Collections.Generic;
 
 public partial class DialogueBox : ColorRect
 {
-	private string csvPath = "./modules/dialogue/game_dialogue_sheets.csv";
+    private string csvPath = "res://modules/dialogue/game_dialogue_sheets.csv";
 
-	private Label nameLabel;
-	private RichTextLabel dialogueLabel;
+    private Label nameLabel;
+    private RichTextLabel dialogueLabel;
 
-	private List<string> dialogueLog;
-	private Dictionary<string, Dictionary<string, string>> sceneState;
+    private List<string> dialogueLog;
+    private Dictionary<string, Dictionary<string, string>> sceneState;
 
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
-		nameLabel = GetNode<Label>("NameLabel");
-		dialogueLabel = GetNode<RichTextLabel>("DialogueLabel");
+    // Called when the node enters the scene tree for the first time.
+    public override void _Ready()
+    {
+        nameLabel = GetNode<Label>("NameLabel");
+        dialogueLabel = GetNode<RichTextLabel>("DialogueLabel");
 
-		dialogueLog = new List<string>();
-		sceneState = new Dictionary<string, Dictionary<string, string>>();
+        dialogueLog = new List<string>();
+        sceneState = new Dictionary<string, Dictionary<string, string>>();
 
-		GD.Print(ReadCsv(csvPath).Rows[0].ToString());
-	}
+        var dialog = ReadCsv(csvPath);
+        for (int i = 0; i < dialog.Count; i++)
+        {
+            GD.Print(dialog.Count);
+            foreach (KeyValuePair<string, object> kvp in dialog[i])
+            {
+                GD.Print($"{kvp.Key}: {kvp.Value}");
+            }
+            GD.Print($"\n");
+        }
+    }
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-	}
+    // Called every frame. 'delta' is the elapsed time since the previous frame.
+    public override void _Process(double delta)
+    {
+    }
 
-	private DataTable ReadCsv(string filePath)
-	{
-		DataTable dt = new DataTable();
-		string[] lines = File.ReadAllLines(filePath);
-		if (lines.Length > 0)
-		{
-			string[] header = lines[0].Split(",");
-			foreach (string h in header)
-			{
-				dt.Columns.Add(h);
-			}
+    private List<Dictionary<string, object>> ReadCsv(string filePath)
+    {
+        List<Dictionary<string, object>> listOfCsvData = new
+            List<Dictionary<string, object>>();
 
-			for (int i=1; i<lines.Length; i++)
-			{
-				string[] data = lines[i].Split(',');
-				dt.Rows.Add(data);
-			}
-		}
+        using Godot.FileAccess rawCsvData = Godot.FileAccess.Open(
+                filePath, Godot.FileAccess.ModeFlags.Read
+        );
 
-		return dt;
-	}
+        int lineIndex = -1;
+        string[] headers = [];
+        while (!rawCsvData.EofReached())
+        {
+            lineIndex += 1;
+            string[] data = rawCsvData.GetCsvLine(",");
+
+            if (lineIndex == 0)
+            {
+                headers = data;
+            }
+
+            if (lineIndex > 0)
+            {
+                Dictionary<string, object> csvData = new
+                    Dictionary<string, object>();
+
+                for (int headersIndex = 0; headersIndex < headers.Length; headersIndex++)
+                {
+                    csvData[headers[headersIndex]] = data[headersIndex];
+                }
+                listOfCsvData.Add(csvData);
+            }
+        }
+        return listOfCsvData;
+    } // readCsv
 }

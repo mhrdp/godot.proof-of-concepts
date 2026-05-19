@@ -1,12 +1,11 @@
 dialogueId,characterSpriteId,characterName,characterPosition,typeOfDialogue,jumpToId,dialogueLine
-1,sprite_01,default,left,dialogue,,test_dialogue01
-2,sprite_01,default,right,dialogue,,test_dialogue02
-3,sprite_02,Nona,left,dialogue,,test_dialogue03
-4,,,,choice,5,test_choice01
-4,,,,choice,7,test_choice02
-5,sprite_02,Nona,left,dialogue,,test_after_choice01_01
-6,sprite_01,default,right,dialogue,9,test_after_choice01_02
-7,sprite_01,default,right,dialogue,,test_after_choice02_01
-8,sprite_02,Nona,left,dialogue,9,test_after_choice02_02
-9,sprite_01,default,middle,dialogue,,test_dialogue04
-10,sprite_02,Nona,left,dialogue,,test_dialogue05
+D0001,sprite_01,default,left,dialogue,null,"""test_dialogue01"""
+D0002,sprite_01,default,right,dialogue,null,"""test_dialogue02"""
+D0003,sprite_02,Nona,left,dialogue,null,"""test_dialogue03"""
+C0001,null,null,null,choice,D0004 | D0006,"""test_choice01"" | ""test_choice02"""
+D0004,sprite_02,Nona,left,dialogue,null,test_after_choice01_01
+D0005,sprite_01,default,right,dialogue,D0008,test_after_choice01_02
+D0006,sprite_01,default,right,dialogue,null,test_after_choice02_01
+D0007,sprite_02,Nona,left,dialogue,D0008,test_after_choice02_02
+D0008,sprite_01,default,middle,dialogue,null,test_dialogue04
+D0009,sprite_02,Nona,left,dialogue,null,test_dialogue05
