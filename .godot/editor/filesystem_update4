@@ -6,3 +6,4 @@ res://addons/icon_browser/IconColourPicker.cs
 res://modules/notes_json/components/scr/SavedNotes.cs
 res://addons/icon_browser/BuiltinColourButton.cs
 res://addons/icon_browser/Plugin.cs
+res://modules/dialogue/dialogue.tscn

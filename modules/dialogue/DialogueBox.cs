@@ -20,21 +20,33 @@ public partial class DialogueBox : ColorRect
         dialogueLog = new List<string>();
         sceneState = new Dictionary<string, Dictionary<string, string>>();
 
-        var dialog = ReadCsv(csvPath);
-        for (int i = 0; i < dialog.Count; i++)
-        {
-            GD.Print(dialog.Count);
-            foreach (KeyValuePair<string, object> kvp in dialog[i])
-            {
-                GD.Print($"{kvp.Key}: {kvp.Value}");
-            }
-            GD.Print($"\n");
-        }
+        List<Dictionary<string, object>> dialog = ReadCsv(csvPath);
     }
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(double delta)
     {
+    }
+
+    public override void _Input(InputEvent e)
+    {
+        if (e is InputEventMouseButton mouseInput)
+        {
+            if (mouseInput.Pressed)
+            {
+                switch (mouseInput.ButtonIndex)
+                {
+                    case MouseButton.Left:
+                        GD.Print("Forward the dialog");
+                        break;
+                    case MouseButton.Right:
+                        GD.Print("Open Menu");
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
     }
 
     private List<Dictionary<string, object>> ReadCsv(string filePath)
@@ -69,7 +81,7 @@ public partial class DialogueBox : ColorRect
                 }
                 listOfCsvData.Add(csvData);
             }
-        }
+        } // while loop for rawCsvData
         return listOfCsvData;
-    } // readCsv
+    } // readCsv function
 }

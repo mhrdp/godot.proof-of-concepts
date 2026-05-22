@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1779171448
+::res://::1779409547
 README.md::TextFile::-1::1776559672::0::1::::<><><>0<>0<><>::
 ::res://addons/::1776559672
 ::res://addons/icon_browser/::1776559672
@@ -168,9 +168,9 @@ style_box_flat.svg::CompressedTexture2D::5775570838195173284::1776559672::177655
 style_box_line.svg::CompressedTexture2D::3984928250768846018::1776559672::1776559672::1::::<><><>0<>0<>3f28095fcf77596c32eea99e769ed38b<>res://.godot/imported/style_box_line.svg-4db81c2aeb570954f037f253c393a034.ctex::
 video_stream_theora.svg::CompressedTexture2D::1181859842975781106::1776559672::1776559672::1::::<><><>0<>0<>87c982250adef23abda0da1fad14209f<>res://.godot/imported/video_stream_theora.svg-9d44410a0f7262eedd672648b40e7003.ctex::
 ::res://modules/::1778803094
-::res://modules/dialogue/::1779170827
+::res://modules/dialogue/::1779172208
 dialogue.tscn::PackedScene::5043373540323191056::1778839406::0::1::::<><><>0<>0<><>::uid://b413r1tmpycbn::::res://modules/dialogue/DialogueBox.cs
-DialogueBox.cs::CSharpScript::4477302800620042023::1779170827::0::1::::<>ColorRect<><>0<>0<><>::
+DialogueBox.cs::CSharpScript::4477302800620042023::1779172207::0::1::::<>ColorRect<><>0<>0<><>::
 game_dialogue_sheets.characterName.translation::OptimizedTranslation::6523664036611961062::1778814421::0::1::::<><><>0<>0<><>::
 game_dialogue_sheets.characterPosition.translation::OptimizedTranslation::180383811529015680::1778814421::0::1::::<><><>0<>0<><>::
 game_dialogue_sheets.characterSpriteId.translation::OptimizedTranslation::4557944601001110033::1778814421::0::1::::<><><>0<>0<><>::
