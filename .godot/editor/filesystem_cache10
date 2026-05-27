@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1779409547
+::res://::1779878807
 README.md::TextFile::-1::1776559672::0::1::::<><><>0<>0<><>::
 ::res://addons/::1776559672
 ::res://addons/icon_browser/::1776559672
@@ -167,10 +167,12 @@ sphere_mesh.svg::CompressedTexture2D::692831466279509548::1776559672::1776559672
 style_box_flat.svg::CompressedTexture2D::5775570838195173284::1776559672::1776559672::1::::<><><>0<>0<>fa74225303a89c338ee64d338a1bb8f3<>res://.godot/imported/style_box_flat.svg-2618567ac84464293a98c2d7f1f5f761.ctex::
 style_box_line.svg::CompressedTexture2D::3984928250768846018::1776559672::1776559672::1::::<><><>0<>0<>3f28095fcf77596c32eea99e769ed38b<>res://.godot/imported/style_box_line.svg-4db81c2aeb570954f037f253c393a034.ctex::
 video_stream_theora.svg::CompressedTexture2D::1181859842975781106::1776559672::1776559672::1::::<><><>0<>0<>87c982250adef23abda0da1fad14209f<>res://.godot/imported/video_stream_theora.svg-9d44410a0f7262eedd672648b40e7003.ctex::
-::res://modules/::1778803094
-::res://modules/dialogue/::1779172208
-dialogue.tscn::PackedScene::5043373540323191056::1778839406::0::1::::<><><>0<>0<><>::uid://b413r1tmpycbn::::res://modules/dialogue/DialogueBox.cs
-DialogueBox.cs::CSharpScript::4477302800620042023::1779172207::0::1::::<>ColorRect<><>0<>0<><>::
+::res://modules/::1779511372
+::res://modules/dialogue/::1779824119
+ChoicesBox.cs::CSharpScript::2494271656706142750::1779518548::0::1::::<>Control<><>0<>0<><>::
+ChoicesBox.tscn::PackedScene::1088509071135325792::1779517897::0::1::::<><><>0<>0<><>::uid://bbsij38b2uer3::::res://modules/dialogue/ChoicesBox.cs
+DialogueBox.cs::CSharpScript::6682895079083798856::1779824099::0::1::::<>ColorRect<><>0<>0<><>::
+DialoguePrimary.tscn::PackedScene::5043373540323191056::1779824119::0::1::::<><><>0<>0<><>::uid://c2hiknidjuopc::::res://modules/dialogue/DialogueBox.cs<>uid://prjt5xk57vmu::::res://modules/dialogue/ChoicesBox.tscn
 game_dialogue_sheets.characterName.translation::OptimizedTranslation::6523664036611961062::1778814421::0::1::::<><><>0<>0<><>::
 game_dialogue_sheets.characterPosition.translation::OptimizedTranslation::180383811529015680::1778814421::0::1::::<><><>0<>0<><>::
 game_dialogue_sheets.characterSpriteId.translation::OptimizedTranslation::4557944601001110033::1778814421::0::1::::<><><>0<>0<><>::
@@ -178,7 +180,9 @@ game_dialogue_sheets.csv::::1693992278278483192::1779157098::1778896216::0::::<>
 game_dialogue_sheets.dialogueLine.translation::OptimizedTranslation::3107740369038508350::1778814421::0::1::::<><><>0<>0<><>::
 game_dialogue_sheets.jumpToId.translation::OptimizedTranslation::946616990147693606::1778814421::0::1::::<><><>0<>0<><>::
 game_dialogue_sheets.typeOfDialogue.translation::OptimizedTranslation::6063207544720233756::1778814421::0::1::::<><><>0<>0<><>::
-system.md::TextFile::-1::1778810579::0::1::::<><><>0<>0<><>::
+README.md::TextFile::-1::1779412735::0::1::::<><><>0<>0<><>::
+StoryScene.tscn::PackedScene::5495747705602045918::1779587210::0::1::::<><><>0<>0<><>::uid://cd4bvi6jej3uq::::res://modules/dialogue/DialoguePrimary.tscn
+::res://modules/dialogue/assets/::1779587234
 ::res://modules/notepad/::1776559672
 Notepad.cs::CSharpScript::386696424041401988::1776559672::0::1::::<>Control<><>0<>0<><>::
 notepad.tscn::PackedScene::3010665808766822660::1776559672::0::1::::<><><>0<>0<><>::uid://b3hxokiqwbuo3::::res://examples/icon_texture/theme.tres<>uid://frk3lwc6jtng::::res://modules/notepad/Notepad.cs

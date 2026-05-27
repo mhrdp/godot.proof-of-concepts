@@ -1,9 +1,0 @@
-res://modules/dialogue/DialogueBox.cs
-res://addons/icon_browser/IconBrowser.cs
-res://modules/notepad/Notepad.cs
-res://modules/notes_json/components/scr/NotesHomepage.cs
-res://addons/icon_browser/IconColourPicker.cs
-res://modules/notes_json/components/scr/SavedNotes.cs
-res://addons/icon_browser/BuiltinColourButton.cs
-res://addons/icon_browser/Plugin.cs
-res://modules/dialogue/dialogue.tscn

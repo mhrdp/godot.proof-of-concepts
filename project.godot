@@ -27,3 +27,9 @@ window/size/viewport_height=720
 [dotnet]
 
 project/assembly_name="Proof of Concepts"
+
+[global_group]
+
+Dialogue=""
+DialogueChoices=""
+InterfaceElement=""

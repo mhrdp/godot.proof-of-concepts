@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://prjt5xk57vmu"]
+
+[ext_resource type="Script" uid="uid://bbsij38b2uer3" path="res://modules/dialogue/ChoicesBox.cs" id="1_we7rc"]
+
+[node name="ChoicesBox" type="Control" unique_id=1135838029]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_we7rc")
+
+[node name="ChoiceContainer" type="ColorRect" parent="." unique_id=2052303942]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 40.0
+color = Color(0.5211406, 0.5211406, 0.5211405, 1)
+
+[node name="ChoiceText" type="Label" parent="ChoiceContainer" unique_id=966617123]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 40.0
+text = "choices_01"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

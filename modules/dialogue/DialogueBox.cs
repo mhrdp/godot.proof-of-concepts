@@ -3,29 +3,33 @@ using System.Collections.Generic;
 
 public partial class DialogueBox : ColorRect
 {
-    private string csvPath = "res://modules/dialogue/game_dialogue_sheets.csv";
+    [Export] public PackedScene choicesBoxScene { get; set; }
+
+    private string csvPath;
 
     private Label nameLabel;
     private RichTextLabel dialogueLabel;
 
+    private int dialogueCount;
+    private int dialogueLimit;
     private List<string> dialogueLog;
+    private List<Dictionary<string, object>> dialogueList;
     private Dictionary<string, Dictionary<string, string>> sceneState;
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
-        nameLabel = GetNode<Label>("NameLabel");
-        dialogueLabel = GetNode<RichTextLabel>("DialogueLabel");
+        csvPath = "res://modules/dialogue/game_dialogue_sheets.csv";
+        nameLabel = GetNode<Label>("%NameLabel");
+        dialogueLabel = GetNode<RichTextLabel>("%DialogueLabel");
 
         dialogueLog = new List<string>();
         sceneState = new Dictionary<string, Dictionary<string, string>>();
 
-        List<Dictionary<string, object>> dialog = ReadCsv(csvPath);
-    }
-
-    // Called every frame. 'delta' is the elapsed time since the previous frame.
-    public override void _Process(double delta)
-    {
+        dialogueList = ReadCsv(csvPath);
+        dialogueCount = dialogueList.Count;
+        dialogueLimit = dialogueList.Count;
+        GD.Print(dialogueCount);
     }
 
     public override void _Input(InputEvent e)
@@ -37,7 +41,36 @@ public partial class DialogueBox : ColorRect
                 switch (mouseInput.ButtonIndex)
                 {
                     case MouseButton.Left:
-                        GD.Print("Forward the dialog");
+                        // Forward the dialogue
+                        int count = dialogueLimit - dialogueCount;
+                        if (count < dialogueLimit)
+                        {
+                            string characterName = (string)dialogueList[count]["characterName"];
+                            object dialogueLine = (string)dialogueList[count]["dialogueLine"];
+
+                            if (characterName == "null")
+                            {
+                                nameLabel.Text = "";
+                            }
+
+                            if (dialogueLine.ToString().Contains("|"))
+                            {
+                                string[] dialogueChoices = dialogueLine.ToString().Split("|");
+                                for (int index = 0; index < dialogueChoices.Length; index++)
+                                {
+                                    ChoicesBox choicesBox = choicesBoxScene.Instantiate<ChoicesBox>();
+                                    GetTree().Root.AddChild(choicesBox);
+                                    choicesBox.AddChoices(dialogueChoices[index]);
+                                    choicesBox.AddGap();
+                                }
+                            }
+
+                            if (!dialogueLine.ToString().Contains("|"))
+                            {
+                                nameLabel.Text = characterName;
+                                dialogueLabel.Text = (string)dialogueLine;
+                            }
+                        } // if count < dialogueLimit
                         break;
                     case MouseButton.Right:
                         GD.Print("Open Menu");

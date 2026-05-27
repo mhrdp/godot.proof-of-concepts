@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ckkgfrakndbyc"]
+
+[ext_resource type="PackedScene" uid="uid://cd4bvi6jej3uq" path="res://modules/dialogue/DialoguePrimary.tscn" id="1_g0spb"]
+
+[node name="StoryScene" type="Node2D" unique_id=1489012756]
+
+[node name="DialoguePrimary" parent="." unique_id=1487843645 instance=ExtResource("1_g0spb")]
+offset_top = 520.0
+offset_bottom = 520.0
