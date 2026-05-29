@@ -1,9 +1,9 @@
+Control
 MenuButton
 VBoxContainer
 BoxContainer
 HBoxContainer
 Container
-Control
 Label
 ColorRect
 Area2D
