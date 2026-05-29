@@ -17,14 +17,13 @@ public partial class DialoguePrimary : ColorRect
 
     // Class variables
     private string csvPath;
-    private int currentDialogueId;
+    private int currentDialogueIndex;
     private List<string> dialogueLog;
     private List<Dictionary<string, object>> dialogueList;
     private Dictionary<string, Dictionary<string, string>> sceneState;
 
 
-    // Godot built-in functions
-    // Called when the node enters the scene tree for the first time.
+    //****** Godot built-in functions ******//
     public override void _Ready()
     {
         csvPath = "res://modules/dialogue/game_dialogue_sheets.csv";
@@ -33,6 +32,8 @@ public partial class DialoguePrimary : ColorRect
 
         dialogueLog = new List<string>();
         sceneState = new Dictionary<string, Dictionary<string, string>>();
+
+        currentDialogueIndex = 0;
 
         dialogueList = ReadCsv(csvPath);
     }
@@ -43,28 +44,40 @@ public partial class DialoguePrimary : ColorRect
         {
             if (mouseEvent.Pressed)
             {
-                int getCurrentDialogueId;
-                DialogueManager(mouseEvent, currentDialogueId);
-                getCurrentDialogueId = (int)dialogueList[currentDialogueId]["dialogueId"];
-                currentDialogueId = getCurrentDialogueId;
+                DialogueManager(mouseEvent, currentDialogueIndex);
+                currentDialogueIndex += 1;
             }
         }
     }
 
 
-    // Developer custom functions
-    private void DialogueManager(InputEventMouseButton @mouseEvent, int dialogueId)
+    //****** Developer custom functions ******//
+    private void DialogueManager(InputEventMouseButton @mouseEvent, int dialogueIndex)
     {
-        switch (@mouseEvent.ButtonIndex)
+        if (dialogueIndex < dialogueList.Count)
         {
-            case MouseButton.Left:
-                break;
+            switch (@mouseEvent.ButtonIndex)
+            {
+                case MouseButton.Left:
+                    string dialogueLine = (string)dialogueList[dialogueIndex]["dialogueLine"];
+                    string speakerName = (string)dialogueList[dialogueIndex]["characterName"];
 
-            case MouseButton.Right:
-                break;
+                    if (dialogueLine.Contains("|"))
+                    {
+                        string[] dialogueChoices = dialogueLine.Split("|");
+                    }
 
-            default:
-                break;
+                    NAME_LABEL.Text = speakerName;
+                    DIALOGUE_LABEL.Text = dialogueLine;
+
+                    break;
+
+                case MouseButton.Right:
+                    break;
+
+                default:
+                    break;
+            }
         }
     }
 
