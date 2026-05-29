@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 public partial class DialogueBox : ColorRect
 {
-    [Export] public PackedScene choicesBoxScene { get; set; }
+    [Export] public PackedScene CHOICEBOX_SCENE { get; set; }
+
+    private Label NAME_LABEL;
+    private RichTextLabel DIALOGUE_LABEL;
 
     private string csvPath;
-
-    private Label nameLabel;
-    private RichTextLabel dialogueLabel;
 
     private int dialogueCount;
     private int dialogueLimit;
@@ -20,8 +20,8 @@ public partial class DialogueBox : ColorRect
     public override void _Ready()
     {
         csvPath = "res://modules/dialogue/game_dialogue_sheets.csv";
-        nameLabel = GetNode<Label>("%NameLabel");
-        dialogueLabel = GetNode<RichTextLabel>("%DialogueLabel");
+        NAME_LABEL = GetNode<Label>("%NameLabel");
+        DIALOGUE_LABEL = GetNode<RichTextLabel>("%DialogueLabel");
 
         dialogueLog = new List<string>();
         sceneState = new Dictionary<string, Dictionary<string, string>>();
@@ -29,57 +29,6 @@ public partial class DialogueBox : ColorRect
         dialogueList = ReadCsv(csvPath);
         dialogueCount = dialogueList.Count;
         dialogueLimit = dialogueList.Count;
-        GD.Print(dialogueCount);
-    }
-
-    public override void _Input(InputEvent e)
-    {
-        if (e is InputEventMouseButton mouseInput)
-        {
-            if (mouseInput.Pressed)
-            {
-                switch (mouseInput.ButtonIndex)
-                {
-                    case MouseButton.Left:
-                        // Forward the dialogue
-                        int count = dialogueLimit - dialogueCount;
-                        if (count < dialogueLimit)
-                        {
-                            string characterName = (string)dialogueList[count]["characterName"];
-                            object dialogueLine = (string)dialogueList[count]["dialogueLine"];
-
-                            if (characterName == "null")
-                            {
-                                nameLabel.Text = "";
-                            }
-
-                            if (dialogueLine.ToString().Contains("|"))
-                            {
-                                string[] dialogueChoices = dialogueLine.ToString().Split("|");
-                                for (int index = 0; index < dialogueChoices.Length; index++)
-                                {
-                                    ChoicesBox choicesBox = choicesBoxScene.Instantiate<ChoicesBox>();
-                                    GetTree().Root.AddChild(choicesBox);
-                                    choicesBox.AddChoices(dialogueChoices[index]);
-                                    choicesBox.AddGap();
-                                }
-                            }
-
-                            if (!dialogueLine.ToString().Contains("|"))
-                            {
-                                nameLabel.Text = characterName;
-                                dialogueLabel.Text = (string)dialogueLine;
-                            }
-                        } // if count < dialogueLimit
-                        break;
-                    case MouseButton.Right:
-                        GD.Print("Open Menu");
-                        break;
-                    default:
-                        break;
-                }
-            }
-        }
     }
 
     private List<Dictionary<string, object>> ReadCsv(string filePath)
