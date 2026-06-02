@@ -40,27 +40,35 @@ public partial class DialoguePrimary : ColorRect
 
     public override void _Input(InputEvent @event)
     {
-        if (@event is InputEventMouseButton mouseEvent)
-        {
-            if (mouseEvent.Pressed)
-            {
-                DialogueManager(mouseEvent, currentDialogueIndex);
-                currentDialogueIndex += 1;
-            }
-        }
     }
 
 
     //****** Developer custom functions ******//
-    private void DialogueManager(InputEventMouseButton @mouseEvent, int dialogueIndex)
+    private string FormatDialogueId(string prefix, int id)
+    {
+        // Four trailing zeros
+        // {prefix}0001, {prefix}0002, ... {prefix}0010, ... {prefix}nnnn
+        int trailingZerosNum = 4;
+        string idWithTrailingZeros = id.ToString().PadLeft(trailingZerosNum, '0');
+        string combinePrefixAndId = string.Concat(prefix, idWithTrailingZeros);
+
+        return combinePrefixAndId;
+    }
+
+    private void DialogueManager(
+            InputEventMouseButton @mouseEvent,
+            int dialogueIndex
+            )
     {
         if (dialogueIndex < dialogueList.Count)
         {
             switch (@mouseEvent.ButtonIndex)
             {
                 case MouseButton.Left:
-                    string dialogueLine = (string)dialogueList[dialogueIndex]["dialogueLine"];
-                    string speakerName = (string)dialogueList[dialogueIndex]["characterName"];
+                    string dialogueLine = (string)
+                        dialogueList[dialogueIndex]["dialogueLine"];
+                    string speakerName = (string)
+                        dialogueList[dialogueIndex]["characterName"];
 
                     if (dialogueLine.Contains("|"))
                     {
@@ -107,7 +115,11 @@ public partial class DialoguePrimary : ColorRect
                 Dictionary<string, object> csvData = new
                     Dictionary<string, object>();
 
-                for (int headersIndex = 0; headersIndex < headers.Length; headersIndex++)
+                for (
+                        int headersIndex = 0;
+                        headersIndex < headers.Length;
+                        headersIndex++
+                        )
                 {
                     csvData[headers[headersIndex]] = data[headersIndex];
                 }
